@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="icon" href="../favicon.ico" type="image/gif" sizes="16x16">
+  <link rel="stylesheet" href="../css/common.css">
+  <title>Details of property</title>
+  <style>
+    .centertext {
+      display: none;
+    }
+
+    #invoice {
+      padding: 30px;
+    }
+
+    .invoice {
+      position: relative;
+      background-color: #FFF;
+      min-height: 680px;
+      padding: 15px
+    }
+
+    .invoice header {
+      padding: 15px 0;
+      margin-bottom: 25px;
+      border-bottom: 2px solid #3989c6
+    }
+
+    .Tbox {
+      border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      border-bottom-style: hidden;
+      resize: none;
+      outline: none;
+      background-color: white;
+    }
+
+    .customerhr {
+      margin-top: 0px;
+      margin-bottom: 8px;
+    }
+
+    *   label{
+      font-weight: normal;
+
+    }
+  </style>
+</head>
+
+<body class="responsive4">
+  <div id="modelDiv" class="modal fade in" style="background-color: black;opacity: 0.5;z-index: 999;"></div>
+  <div class="header">
+    <div id="headerContent"></div>
+  </div><br>
+  <div class="container">
+    <div class="row minHight">
+      <div class="col-md-12">
+        <div class="row" style="background-color: white;">
+          <div class="col-md-12 ">
+            <div class="col-md-12 ">
+              <div class="loader preLoad"></div>
+              <form class="row" id="image-form">
+                <div class="row">
+                  <div class="col-md-12 ">
+                    <p class="sub-tp"><strong id="topic">Details of Property</strong>
+                    <div id="msgSuccess"></div>
+                    </p>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-5">
+                      <label class="control-label" for="listCompany"><strong>අදාළ කාර්යාලය | Related Office</strong></label>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group">
+                        <label class="al">:</label><span style="color: red;"></span>
+                        <label class="control-label" id="lblOffice"></label>
+                        <span class="field-validation-valid" data-valmsg-for="listCompany"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-5">
+                      <label class="control-label" for="listCompany"><strong>කොට්ඨාශය | Division</strong></label>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group">
+                        <label class="al">:</label><span style="color: red;"></span>
+                        <label class="control-label" id="lblDiv"></label>
+                        <span class="field-validation-valid" data-valmsg-for="listCompany"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-5">
+                      <label class="control-label" for="listCompany"><strong>වීදියේ නම | Street Name</strong></label>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group">
+                        <label class="al">:</label><span style="color: red;"></span>
+                        <label class="control-label" id="lblStreet"></label>
+                        <span class="field-validation-valid" data-valmsg-for="listCompany"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-5">
+                      <label class="control-label" for="listCompany"><strong>දේපල අංකය | Property NO</strong></label>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group">
+                        <label class="al">:</label><span style="color: red;"></span>
+                        <label class="control-label" id="lblPropertyNo"></label>
+                        <span class="field-validation-valid" data-valmsg-for="listCompany"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-5">
+                      <label class="control-label" for="listCompany"><strong>පාරිභෝගික   අංකය | Custom NO</strong></label>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group">
+                        <label class="al">:</label><span style="color: red;"></span>
+                        <label class="control-label" id="lblCustomNo"></label>
+                        <span class="field-validation-valid" data-valmsg-for="listCompany"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-5">
+                      <label class="control-label" for="listCompany"><strong>අයිතිකරුගේ නම | Owner Name</strong></label>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group">
+                        <label class="al">:</label><span style="color: red;"></span>
+                        <label class="control-label" id="lblOwner"></label>
+                        <span class="field-validation-valid" data-valmsg-for="listCompany"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-5">
+                      <label class="control-label" for="listCompany"><strong>විස්තර | Description</strong></label>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group">
+                        <label class="al">:</label><span style="color: red;"></span>
+                        <label class="control-label" id="lblDesc"></label>
+                        <span class="field-validation-valid" data-valmsg-for="listCompany"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-5">
+                      <label class="control-label" for="listCompany"><strong>වාර්ෂික වටිනාකම / කාර්තු වටිනාකම  | Annual Value / Quarter Rate</strong></label>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group">
+                        <label class="al">:</label><span style="color: red;"></span>
+                        <label class="control-label" id="lblAV"></label>
+                        <span class="field-validation-valid" data-valmsg-for="listCompany"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-5">
+                      <label class="control-label" for="listCompany"><strong>හිඟ මුදල | Arrears</strong></label>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group">
+                        <label class="al">:</label><span style="color: red;"></span>
+                        <label class="control-label" id="lblArrears"></label>
+                        <span class="field-validation-valid" data-valmsg-for="listCompany"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-5">
+                      <label class="control-label" for="listCompany"><strong>දඩ මුදල | Warrent</strong></label>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group">
+                        <label class="al">:</label><span style="color: red;"></span>
+                        <label class="control-label" id="lblWarrent"></label>
+                        <span class="field-validation-valid" data-valmsg-for="listCompany"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-5">
+                      <label class="control-label" for="listCompany"><strong>ප්‍රවර්තන වර්ෂයට අදාල මුදල | Year Rate</strong></label>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group">
+                        <label class="al">:</label><span style="color: red;"></span>
+                        <label class="control-label" id="lblRate"></label>
+                        <span class="field-validation-valid" data-valmsg-for="listCompany"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-5">
+                      <label class="control-label" for="listCompany"><strong>ඉදිරියට ගෙවු මුදල | Future</strong></label>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group">
+                        <label class="al">:</label><span style="color: red;"></span>
+                        <label class="control-label" id="lblFuture"></label>
+                        <span class="field-validation-valid" data-valmsg-for="listCompany"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-5">
+                      <label class="control-label" for="listCompany"><strong>වට්ටම් | Discount</strong></label>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="form-group">
+                        <label class="al">:</label><span style="color: red;"></span>
+                        <label class="control-label" id="lblDiscount"></label>
+                        <span class="field-validation-valid" data-valmsg-for="listCompany"
+                          data-valmsg-replace="true"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- --Owner Info-- -->
+                <div class="div-hide" id="nme">
+                  <div class="form-group">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-offset-2 col-sm-4">
+                      <label>Full Name:</label>&nbsp;<span id="customerName"></span>
+                    </div>
+                    <div class="col-sm-4"></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-offset-2 col-sm-4">
+                      <label></label>&nbsp;<span id="proDescription"></span> | <span id="property"></span>
+                    </div>
+                    <div class="col-sm-4"></div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-offset-2 col-sm-4">
+                      <label>Annual Value:</label>&nbsp;<span id="annVal"></span>
+                    </div>
+                    <div class="col-sm-4"></div>
+                  </div>
+                </div>
+                <!-- Owner Info End -->
+
+                <div class="row">
+                  <div class="col-md-6" role="alert" id="msgErr"></div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-5"></div>
+                  <div class="col-md-6">
+                    <div align="right" class="view">
+                      <input type="hidden" id="ID" />
+                      <input type="hidden" id="customerID">
+                      <input type="hidden" id="loginType">
+                      <input type="hidden" id="userName">
+                      <input type="hidden" id="infoLoc">
+                      <button type="button" id="btPayment" title="submit" class="btn btn-success">Go To
+                        Payment</button>
+                      <button type="button" id="reset" onclick="Reset();" title="clear"
+                        class="btn btn-info">Back</button>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div><br>
+              </form>
+              <div id="error" style="color:red;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br>
+<div id="divFooter"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="../js/config.js"></script>
+<script src="js/RateConfig.js"></script>
+<script src="js/rate-info.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script type="text/javascript" src="js/sweetalert2.all.js"></script>
+<script>
+  $("#divFooter").load('../footer.html');
+  $("#headerContent").load('../header.html');
+</script>
+</html>

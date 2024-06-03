@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/footer.css"> 
+        <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16">
+        <style>
+            .buttnS{
+                background-color: #3498DB;
+                box-shadow: 0px 15px 0px 0px #258cd1;
+                text-decoration: none;
+                color: #ffffff;
+                background: #040b63e3;
+                position: relative;
+                top: 80px;
+                padding: 16px;
+                font-size: 18px;
+                border-radius: 50px;
+                box-shadow: 0px 6px 0px 0px #b2db34, 0px 0px 20px 0px #bbb;
+                transition: all 0.2s;
+            }
+            .buttnC{
+                color: #ffffff !important;
+                text-decoration: none !important;
+            }
+
+        </style>       
+    </head>
+    <body>
+        <div class="header">
+            <div class="">
+                <div class="col-md-8"></div>
+                <div class="col-md-4"><button type="button" onclick="signin();" class="btn btn-info pull-right existing">Already Registered?</button></div>
+            </div>           
+            <div id="headerContent"></div>      
+         
+        </div>
+        <div class="container">
+            <div class="row minHight"> 
+                <p class="sub-tp"><strong>අන්තර්ජාල සේවාවන් / Online Services</strong></p>
+                <div class="col-md-12">
+                   
+                    <div class="row well">
+                        <div class="col-md-5 home-content buttnS">
+                            <a href="../online-services/instructions.html" id="street-line" class="buttnC" onclick="street();">(01) වීථිරේඛා සහතිකය ලබා ගැනීම සඳහා ඉල්ලුම් පත්‍රය</a>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 home-content buttnS">
+                            <a href="../online-services/instructions.html" id="non-aquisition" class="buttnC" onclick="nonAqui();">(02) නොපවරා ගැනීමේ සහතිකයක් ලබා ගැනීමේ අයදුම් පත්‍රය</a>
+                        </div>
+                    </div>
+                    <div class="row well">                       
+                       
+                        <div class="col-md-5 home-content buttnS">
+                            <a href="sign-in.html?type=BUSINESSTAX" id="non-aquisition" class="buttnC" >(03)  ව්‍යාපාර බද්ද</a>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 home-content buttnS">
+                            <a href="sign-in.html?type=Rate" id="street-line" class="buttnC" >(04) වරිපනම් බදු ගෙවීම්</a>
+                        </div>
+                    </div>
+               
+                    <div class="row well">
+                        <div class="col-md-5 home-content buttnS">
+                            <a href="sign-in.html?type=TownHall" id="street-line" class="buttnC" >(05) නගර ශාලාව වෙන්කිරීම</a>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 home-content buttnS">
+                            <a href="sign-in.html?type=GARBAGEFEE" id="street-line" class="buttnC" >(06) කසල ඉවත් කිරීම</a>
+                        </div>
+                    </div>
+
+                    <div class="row well">
+                        <div class="col-md-5 home-content buttnS">
+                            <a href="sign-in.html?type=Boutique" id="street-line" class="buttnC" >(07)කඩ කුලී ගෙවීම්</a>
+                        </div>
+                        <div class="col-md-2"></div>
+						
+                        <div class="col-md-5 home-content buttnS">
+						<a href="sign-in.html?type=GULLY" id="street-line" class="buttnC" >(08)ගලි බවුසර්</a>
+                        </div>
+                    </div>
+					 
+                   
+                </div>
+            </div>            
+        </div>
+        <div id="divFooter"></div>       
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/login.js"></script>
+
+    <script>
+        var councilName = getCouncilName();
+         $("#changeTopic").text(councilName);
+
+        function signin(){
+            window.location ="sign-in.html";
+        }
+    </script>
+    <script>
+        $("#headerContent").load('header.html');
+        $("#divFooter").load('footer.html');
+        
+    </script>
+</html>

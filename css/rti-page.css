@@ -1,0 +1,75 @@
+.container-lamp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .boxc {
+    width: 250px;
+    height: 150px;
+    background-color: #833001;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  
+  .boxc::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(228, 70, 8, 0.5);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .boxc:hover::before {
+    transform: translate(-50%, -50%) scale(3);
+  }
+  
+  .boxc a {
+    text-decoration: none;
+    color: #000; /* Default text color before hover */
+    z-index: 2;
+    position: relative;
+    color: inherit; /* Make sure color inherits from parent */
+    font-weight: normal; /* Set default font-weight */
+  }
+  
+  .boxc:hover a {
+    color: #ffffff; /* Change color on hover */
+    font-weight: bold; /* Make font bold on hover */
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media screen and (max-width: 768px) {
+    .container-lamp {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .boxc {
+      margin: 10px;
+      width: 250px;
+      height: 200px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .boxc {
+      margin: 5px;
+      width: 120px;
+      height: 120px;
+    }
+  }
+  

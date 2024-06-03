@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+* {
+  font-family: 'Open Sans', sans-serif; /* Use Open Sans font */
+}
+
+html {
+  margin: 0;
+  height: 100%;
+}
+
+
+
+.time {
+  color: #d1731a;
+  text-shadow: 0 1px 5px black;
+}
+
+.hour {
+  font-size: 20px;
+}
+
+.date {
+  font-size: 20px;
+}

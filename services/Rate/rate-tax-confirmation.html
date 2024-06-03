@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="icon" href="../favicon.ico" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>Property Payment confirmtion </title>
+
+    <style>
+        .mobile_height {
+          height: 50px;
+        }
+    
+        #label {
+          width: 100%;
+        }
+    
+    
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+    
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: #f1f1f1;
+          position: relative;
+          padding-bottom: 58px;
+          min-height: 100vh;
+        }
+    
+        @media(min-width:768px) {
+          .table1 {
+            table-layout: fixed;
+          }
+        }
+    </style>
+</head>
+<body class="responsive4">
+    <div id="modelDiv" class="modal fade in" style="background-color: black;opacity: 0.5;z-index: 999;"></div>
+    <div class="header">
+        <div id="headerContent"></div>
+    </div><br>
+    <div class="container" style="background-color: white;">
+        <div class="row minHight">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <p class="sub-tp"><strong id="topic"></strong>
+                        <div class="" id="msgSuccess"></div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="loader preLoad"></div>
+                <div class="row well">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <p class="paymentInstruc">
+                                ගෙවීම් සිදු කිරීම සඳහා මින් ඉදිරියට බැංකුව සමග සම්බන්ද විය යුතු අතර මෙහිදී ඔබ විසින්
+                                ගෙවන මුදල් ආපසු ගෙවීමක් සිදු නොකරනු ලබයි. ඔබ විසින් ගෙවන ලද මුදල් <span
+                                    id="council"></span> අදාල වරිපනම් අංක වලට ස්වයංක්‍රීයව යාවත්කාලීන වේ. ඔබගේ බැංකු
+                                කාඩ්පත් වලට අදාල තොරතුරු ඇතුලත් කර ගෙවීම් සිදුකල පසු අදාල බිල්පත මුද්‍රණය කරගැනීමේ
+                                හැකියාව ඇත.
+                            </p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <p class="paymentagree">
+                                        Are you having any problems? Please email <span id="lblcontactEmail"></span> or
+                                        contact on <span id="lblContactNo"></span>.
+                                    </p>
+
+                                    <div class="col-md-12">
+                                    <div class="row">
+                                        <hr class="hrStyle">
+                                        <div class="">
+                                            <p class="paymentInstruc_clr">
+                                                NOTE: You will need to connect the bank in order to make the payment,
+                                                and there will be no refunds. You can enter your bank card details and
+                                                print the bill after making the payment.
+                                                In addition to above fee a convenience fee will be payable and the
+                                                amount will vary depending on the payment gateway.
+                                            </p>
+                                            <p class="agree">සැ.යු : ඔබ මුදල් ගෙවනු ලබන්නේ DEBIT කාඩ්පතකින් නම් මුදල්
+                                                ගෙවීමට ප්‍රථම, සත්‍යාපන කේතය (OTP Code) ලබා ගැනීමේ පහසුකම කාඩ්පතට අදාළ
+                                                බැංකුව මගින් සක්‍රීය කර ගන්න <br><br>
+                                                NB : IF YOU ARE PAYING BY <b>DEBIT CARD</b>, PLEASE ACTIVATE THE OTP
+                                                CODE FACILITY THROUGH THE RELEVANT BANK BEFORE MAKING A PAYMENT.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                    <div class="row">
+                                        <hr class="hrStyle">
+                                        <div class="col-md-12">
+                                        <!-- <div class="col-md-3"> <img src="assets/logo/visaM.png" style="height: 32px;"
+                                                alt="payment method"></div>
+                                        <div class="col-md-6 logo-algn">
+                                            <img src="assets/logo/logo.png" style="height: 82px;" alt="National Logo">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <img src="assets/logo/peb.png" style="height: 42px;"
+                                                alt="Peoples Bank Logo">
+                                        </div> -->
+
+                                        <table align="center" style="width: 100%;">
+                                            <tr>
+                                                <td><img src="assets/logo/visaM.png" style="height: 32px;"
+                                                    alt="payment method"></td>
+                                                <td>&nbsp;&nbsp;<img src="assets/logo/logo.png" style="height: 82px;" alt="National Logo"></td>
+                                                <td align="right"><img src="assets/logo/peb.png" style="height: 46px;"
+                                                    alt="Peoples Bank Logo"></td>
+                                            </tr>
+                                        </table>
+                                        </div>
+                                        <!-- <hr class="hrStyle"><br> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row"><br></div>
+                                        <div class="row">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-10">
+                                                <div class="row font-design">
+                                                    <div class="col-md-8">
+                                                        <p>වරිපනම් බදු මුදල<span>(රු):</span></p>
+                                                    </div>
+                                                    <div class="col-md-4 rightalgn">
+                                                        <span id="appFee"></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row font-design">
+                                                    <div class="col-md-8">
+                                                        <p>සේවා ගාස්තුව <span>(රු):</span></p>
+                                                    </div>
+                                                    <div class="col-md-4 rightalgn " id="srvce">
+                                                        <span id="serviceFee"></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row font-design">
+                                                    <div class="col-md-8">
+                                                        <p>ගෙවිය යුතු මුළු මුදල <span>(රු):</span></p>
+                                                    </div>
+                                                    <div class="col-md-4 rightalgn bottm2"
+                                                        style="border-top:#CCCCCC 3px solid;">
+                                                        <span id="totAmt"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="padding-top:15px;">
+                                    <input type="hidden" id="ID" />
+                                    <input type="hidden" id="customerID">
+                                    <input type="hidden" id="loginType">
+                                    <input type="hidden" id="userName">
+                                    <input type="hidden" id="infoLoc">
+                                    <input type="hidden" id="mobile">
+                                    <input type="hidden" id="email">
+                                    <div class="col-sm-offset-2 col-sm-12">
+                                        <button type="button" id="confirm" title="confirmation"
+                                            class="btn btn-success">තහවුරු කරන්න | Confirm</button>
+                                        <button type="button" id="reset" onclick="calltoinfopage();" title="back"
+                                            class="btn btn-info">Back</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <div id="divFooter"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="js/RateConfig.js"></script>
+<script src="../js/config.js"></script>
+<script src="js/rate-confirm.js"></script>
+
+<script type="text/javascript" src="js/sweetalert2.all.js"></script>
+<script>
+    $("#divFooter").load('../footer.html');
+    $("#headerContent").load('../header.html');
+</script>
+</html>

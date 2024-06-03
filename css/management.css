@@ -1,0 +1,32 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow buttons to wrap to next line on smaller screens */
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    margin: 10px;
+    background-color: #a85706;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 0 0 auto; /* Allow buttons to shrink if needed */
+    animation: popIn 0.5s ease forwards; /* Add popping animation */
+    opacity: 0; /* Start with opacity 0 for animation */
+}
+
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    80% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.button:hover {
+    background-color: #00b35c;
+}

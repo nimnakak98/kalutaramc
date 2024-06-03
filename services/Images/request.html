@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="icon" href="../favicon.ico" type="image/gif" sizes="16x16">
+    <link rel="style" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/module.css">
+    <title>Ground Reservation </title>
+</head>
+
+<body>
+    <div id="modelDiv" class="modal fade in" style="background-color: black;opacity: 0.5;z-index: 999;"></div>
+    <div class="header">
+        <div id="headerContent"></div>
+    </div>
+    <div class="container">
+        <div class="row minHight">
+            <div class="col-md-12" style="background-color: white;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="sub-tp"><strong id="topic">Ground Reservation - Booking Details</strong></p>
+                    </div>
+                </div>
+                <form id="groundApplication">
+                    <div class="row well">
+                        <div class="loader preLoad" id="loading-image"></div>
+                        <div class="col-md-12">                           
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="listGround">භූමිය | Ground Name</label><span
+                                            style="color: red;">*</span>
+                                        <select class="form-control" data-val="true"
+                                            data-val-required="The Company field is required." id="listGround"
+                                            name="listGround">
+                                            <option value="">- Select ground Name -</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label"> භූමිය වෙන් කළ යුතු අයගේ/ආයතනයේ නම | Name of the
+                                            person</label><span style="color: red;">*</span>
+                                        <input type="text" class="form-control" id="personOrInstituteName"
+                                            name="personOrInstituteName"
+                                            placeholder="Please enter the name or institute !">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" id="dateTimeForm">
+                                        <label class="control-label" for="listCompany">ආරම්භක දිනය සහ වෙලාව | Starting date & time</label><span style="color: red;">*</span>
+                                        <input type="datetime-local" class="form-control" id="startingDateTime" placeholder="Select date.">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" id="dateTimeForm">
+                                        <label class="control-label" for="listCompany">අවසාන දිනය සහ වෙලාව | Ending date and time </label><span style="color: red;">*</span>
+                                        <input type="datetime-local" class="form-control" id="endingDateTime" placeholder="Select date.">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">අයදුම්කරුගේ නම | Name of the Applicant</label><span
+                                            style="color: red;">*</span>
+                                        <input type="text" class="form-control" id="NameOfTheApplicant"
+                                            name="NameOfTheApplicant"
+                                            placeholder="Please enter the name of the applicant">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">ලිපිනය | Address</label><span
+                                            style="color: red;">*</span>
+                                        <input type="text" class="form-control" id="applicatsAddress"
+                                            name="applicatsAddress"
+                                            placeholder="Please enter the address of the applicant !">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">දුරකතන අංකය | Phone number</label><span
+                                            style="color: red;">*</span>
+                                        <input type="text" class="form-control" id="phoenNumber" name="phoenNumber"
+                                            placeholder="Please enter a contact number of the applicant">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">විද්‍යුත් තැපෑල | Email </label><span
+                                            style="color: red;">*</span>
+                                        <input type="text" class="form-control" id="emailAddress" name="emailAddress"
+                                            placeholder="Please enter a email of the applicant">
+                                            <span class="field-validation-valid" data-valmsg-for="listCompany"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">ජාතික හැදුනුම්පත් අංකය | NIC </label><span
+                                            style="color: red;">*</span>
+                                        <input type="text" class="form-control" id="NIC" name="NIC"
+                                            placeholder="Please enther the NIC of the applicant">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">අවශ්‍ය කාරණය | Reason for Reservation </label><span
+                                            style="color: red;">*</span>
+                                        <textarea class="form-control" id="reasonForReservation" type="text" rows="5"
+                                            placeholder="Please enter the reason for the reservation"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="listHall">ලේඛනගත කිරීම | Documentation</label><span style="color: red;"></span>
+                                        <input type="file">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div id="error" style="color:red;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-right">
+                                <input type="reset" value="Reset Form" id="resetButton" class="btn btn-secondary" onclick="return Reset()">
+                                <input type="button" id="btnCheck" class="btn btn-info" value="Requst" onclick="return booking()"/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="customerID">
+    <input type="hidden" id="serviceTyp">
+    <input type="hidden" id="UserName">
+    <div id="divFooter"></div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="../js/config.js"></script>
+<script src="js/GroundConfig.js"></script>
+<script src="js/request.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/moment.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>        
+<script type="text/javascript" src="js/sweetalert2.all.js"></script>
+
+<script>
+    $("#divFooter").load('../footer.html');
+    $("#headerContent").load('../header.html');
+</script>
+
+</html>

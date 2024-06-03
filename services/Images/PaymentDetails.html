@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="icon" href="../favicon.ico" type="image/gif" sizes="16x16">
+
+    <style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f1f1f1;
+  position: relative;
+  padding-bottom: 58px;
+  min-height: 100vh;
+}
+
+main {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 30px 20px;
+  /* min-height: calc(100vh - 211px - 58px); */
+}
+article {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+article:last-child {
+  margin-bottom: 0;
+}
+article h3 {
+  margin: 10px 0 25px 0;
+}
+article p {
+  margin-top: 16px;
+  line-height: 24px;
+}
+footer {
+  text-align: center;
+  /* background-color: #333; */
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* position: fixed;
+  z-index: 1; */
+}
+
+@media(max-width:768px) {
+  header { padding: 30px 20px; }
+  header h1 { font-size: 36px; margin-bottom: 22px; }
+  header p { font-size: 18px; }
+  main { width: 100vw; padding: 20px; }
+  article { margin-bottom: 16px; font-size: 14px; }
+  article h3 { margin: 10px 0 20px 0; }
+  article p { margin-top: 16px; line-height: 20px; }
+}
+
+.tbox {
+   border-top-style: hidden;
+   border-right-style: hidden;
+   border-left-style: hidden;
+   border-bottom-style: hidden;
+   resize: none;
+   outline: none;
+   background-color: white; 
+   width: 300px;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div id="modelDiv" class="modal fade in" style="background-color: black;opacity: 0.5;z-index: 999;"></div>
+    <div class="header">         
+        <div id="headerContent"></div>           
+    </div><br>
+    <div class="container">
+        <div class="row minHight" id="datahave">
+            <div class="col-md-12" style="background-color: white;">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 ">
+                        <p class="sub-tp"><strong id="topic">Payment Details For Ground Booking Service</strong>
+                        <div class="" id="msgSuccess"></div>
+                        </p>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div>
+                    <div class="row well">
+                        <div class="col-md-12">
+                            <div class="loader preLoad" id="loading-image"></div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label" for="listCompany">අයදුම්කරුගේ නම | Name of the
+                                            applicant</label><span style="color: red;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label>:</label>
+                                            <input class = "tbox" type="text" id="txtname" class="form-control" disabled> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label" for="listCompany">අයදුම්කරුගේ ලිපිනය | Address of the applicant</label><span style="color: red;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label>:</label>
+                                        <input class = "tbox" type="text" id="txtaddress" class="form-control" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label" for="listCompany">පිටියේ නම | Ground Name</label><span style="color: red;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label>:</label>
+                                        <input class = "tbox" type="text" id="txtgroundname" class="form-control" value="1" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label" for="listCompany">වෙන් කළ ආරම්භක දිනය වේලාව |
+                                            Allocated Start DateTime</label><span style="color: red;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label>:</label>
+                                        <input class = "tbox" type="text" id="txtallocatedstartDdate" class="form-control" value="YYYY/MM/DD" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label" for="listCompany">වෙන් කරන ලද අවසන් දිනය | Allocated End DateTime</label><span style="color: red;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label>:</label>
+                                        <input class = "tbox" type="text" id="txtallocatedendDdate" class="form-control" value="YYYY/MM/DD" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label" for="listCompany">සේවා ගාස්තු | Service Fee</label><span style="color: red;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label>:</label>
+                                        <input class = "tbox" type="text" id="txtservicefee" class="form-control" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label" for="listCompany">
+                                            තැන්පතු ප්‍රමාණය | Deposit Amount</label><span style="color: red;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label>:</label>
+                                        <input class = "tbox" type="text" id="txtdepositamount" class="form-control" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label" for="listCompany">අමතර ගෙවීම | Extra Payment</label>
+                                        <span style="color: red;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label>:</label>
+                                        <input class = "tbox" type="text" id="txtextrapayment" class="form-control" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label" for="listCompany">මුළු ගාස්තුව | Total Fee</label>
+                                        <span style="color: red;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label>:</label>
+                                        <input class = "tbox" type="text" id="txttotalfee" class="form-control" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label" for="listCompany">ගෙවීම් කළයුතු අවසාන දිනය |
+                                            Due Date</label><span style="color: red;"></span>
+                                        <br>
+                                        <label style="font-size: 10px;">(දින හෝ එදිනට පෙර ගෙවීම් කළයුතුයි)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label>:</label>
+                                        <input class = "tbox" type="text" id="txtpaymentduedate" class="form-control" value="YYYY/MM/DD" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div align="right">
+                                <input class="btn btn-info" type="button" name="submit" style="width: 120px;"
+                                    id="btnprint" onclick="return BackList();" value="Back">
+                                <input class="btn btn-primary" type="button" name="submit" style="width: 120px;" id="submit"
+                                    onclick="return payment();" value="Go To payment">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--another-->
+        <div id="datanot" style="margin-top: 10%;">
+            <img src="assets/iderror.png" alt="Paris" style="width:10%; display: block; margin-left: auto; margin-right: auto;"><br>
+            <p align=center><strong>Sorry, this recipient can't accept payments right now.</strong>
+            <p align=center><strong>Thank You Please Contact.</strong></p>    
+            </p><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br>
+         </div>
+
+        <!--another-->
+        <div id="id-error" style="margin-top: 10%;">
+            <img src="assets/iderror.png" alt="Paris" style="width:10%; display: block; margin-left: auto; margin-right: auto;"><br>
+            <p align=center><strong>Sorry, this ID can't accept. Thank You Please Contact.</strong></p><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br>
+        </div>
+        <!--end-->
+
+        <input type="hidden" id="customerID">
+        <input type="hidden" id="serviceTyp">
+    </div>
+    <br>
+    <div id="divFooter"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="../js/config.js"></script>
+<script src="js/GroundConfig.js"></script>
+<script src="js/PaymentDetails.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script type="text/javascript" src="js/sweetalert2.all.js"></script>
+<script>
+    $("#divFooter").load('../footer.html');
+    $("#headerContent").load('../header.html');
+</script>
+</html>

@@ -1,0 +1,250 @@
+.container-let {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gradient-background {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(23,71,112,1) 51%, rgba(20,9,126,1) 100%);    
+    padding: 20px; /* Add padding as needed */
+    text-align: center; /* Center-align text */
+    color: white;
+}
+
+.listss {
+    color: black;
+    text-align: justify;
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Banner Styles */
+.banner {
+    text-align: center;
+    padding: 20px;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* Adjust margin as needed */
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin: 0;
+    color: #333; /* Change the text color as needed */
+}
+
+/* Question and Answer Section Styles */
+.qa-section {
+    padding: 20px;
+}
+
+.question,
+.answer {
+    margin-bottom: 20px;
+}
+
+.question h2,
+.answer h2 {
+    font-size: 24px;
+    color: #333; /* Change the text color as needed */
+}
+
+/* Details Section Styles */
+.details-section {
+    padding: 20px;
+}
+
+.details-section h2 {
+    font-size: 24px;
+    color: #333; /* Change the text color as needed */
+}
+
+.details-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.details-section li {
+    margin-bottom: 10px;
+}
+
+/* Marquee Section Styles */
+.marquee-section {
+    padding: 20px;
+    overflow: hidden;
+}
+
+.marquee-section img {
+    vertical-align: middle;
+}
+
+.marquee-section span {
+    font-size: 20px;
+    color: #333; /* Change the text color as needed */
+}
+
+/* Quote with Video Section Styles */
+.quote-video-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.quote {
+    margin-bottom: 20px;
+}
+
+.quote blockquote {
+    font-size: 20px;
+    color: #333; /* Change the text color as needed */
+}
+
+.video {
+    margin-top: 20px;
+    position: relative; /* Ensure the container has a position */
+}
+
+/* Picture Section Styles */
+.picture-section {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.picture-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.fly {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('../images/trash/green-bottle-fly-4okrlWB-600-removebg-preview.png'); /* Adjust the path as needed */
+    background-size: cover;
+    animation: fly 10s infinite linear;
+}
+
+  @keyframes fly {
+    0% {
+      top: 50%;
+      left: 0%;
+    }
+    25% {
+      top: 0%;
+      left: 50%;
+    }
+    50% {
+      top: 50%;
+      left: 100%;
+    }
+    75% {
+      top: 100%;
+      left: 50%;
+    }
+    100% {
+      top: 50%;
+      left: 0%;
+    }
+  }
+
+  .fly:nth-child(2) {
+    animation-delay: 2s;
+  }
+
+  .fly:nth-child(3) {
+    animation-delay: 3s;
+  }
+
+  .fly:nth-child(4) {
+    animation-delay: 3s;
+  }
+
+  .fly:nth-child(5) {
+    animation-delay: 4s;
+  }
+
+  .fly:nth-child(6) {
+    animation-delay: 5s;
+  }
+
+
+  /*************************** 3R CONCEPT ***************************/
+
+.special-container {
+    margin-top: 20px;
+}
+
+.special-container h3 {
+    color: #000000;
+    text-align: center;
+}
+
+.blinking-topic {
+    text-align: center;
+    margin-top: 20px;
+    color: darkblue;
+}
+
+.blinking-topic h3 {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.cover-image {
+    align-items: center;
+    height: 150px;
+    margin-top: 20px;
+}
+
+.color-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    width: calc(33.33% - 20px);
+    max-width: 300px;
+    height: 100px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box h4 {
+    margin: 0;
+    color: white;
+    font-size: 1rem; /* Set font size using relative unit */
+    line-height: 1.2; /* Adjust line height as needed */
+}
+
+@media (max-width: 768px) {
+    .box h4 {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .box h4 {
+        font-size: 0.5rem; /* Further adjust font size for smaller screens */
+    }
+}
+

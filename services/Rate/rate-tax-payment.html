@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="icon" href="../favicon.ico" type="image/gif" sizes="16x16">
+  <link rel="stylesheet" href="../css/common.css">
+  <title>property tax payment information</title>
+
+  <style>
+    .centertext {
+      display: none;
+    }
+
+    #invoice {
+      padding: 30px;
+    }
+
+    .invoice {
+      position: relative;
+      background-color: #FFF;
+      min-height: 680px;
+      padding: 15px
+    }
+
+    .invoice header {
+      padding: 15px 0;
+      margin-bottom: 25px;
+      border-bottom: 2px solid #3989c6
+    }
+
+    .Tbox {
+      border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      border-bottom-style: hidden;
+      resize: none;
+      outline: none;
+      background-color: white;
+    }
+
+    .customerhr {
+      margin-top: 0px;
+      margin-bottom: 8px;
+    }
+
+    * label {
+      font-weight: normal;
+
+    }
+  </style>
+</head>
+
+<body class="responsive4">
+  <div id="modelDiv" class="modal fade in" style="background-color: black;opacity: 0.5;z-index: 999;"></div>
+  <div class="header">
+    <div id="headerContent"></div>
+  </div><br>
+  <div class="container">
+    <div class="row minHight">
+      <div class="col-md-12">
+        <div class="row" style="background-color: white;">
+          <div class="col-md-12">
+            <div class="col-md-12 ">
+              <div class="loader preLoad"></div>
+              <form class="row" id="image-form">
+                <div class="row">
+                  <div class="col-md-12 ">
+                    <p class="sub-tp"><strong id="topic">Property Due Amount Details</strong>
+                    <div id="msgSuccess"></div>
+                    </p>
+                  </div>
+                </div>
+                <br>
+
+                <div class="row">
+
+                  <div class="col-md-12">
+
+                    <div class="col-md-5">
+                      <div class="form-group">
+                            <div class="row font-design">
+                              <div class="col-md-8">
+                                <label class="control-label" for="listCompany"><strong>හිඟ මුදල | Arrears</strong></label>
+                              </div>
+                              <div class="col-md-1">
+                                <label class="al">:</label><span style="color: red;"></span>
+                              </div>
+                              <div class="col-md-3 rightalgn " id="srvce">
+                                <label class="control-label" id="lblArrears"></label>
+                              </div>
+                            </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-5">
+                          <div class="row font-design">
+                              <div class="col-md-6">
+                                <label class="control-label" for="listCompany"><strong>කොට්ඨාශය | Division</strong></label>
+                              </div>
+                              <div class="col-md-1">
+                                <label class="al">:</label><span style="color: red;"></span>
+                              </div>
+                              <div class="col-md-5">
+                                <label class="control-label" id="lblDiv"></label>
+                              </div>
+                            </div> 
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+
+                  <div class="col-md-12">
+
+                    <div class="col-md-5">
+                      <div class="form-group">
+                          <div class="row font-design">
+                            <div class="col-md-8">
+                              <label class="control-label" for="listCompany"><strong>දඩ මුදල | Warrent</strong></label>
+                            </div>
+                            <div class="col-md-2">
+                              <label class="al">:</label><span style="color: red;"></span>
+                            </div>
+                            <div class="col-md-2 rightalgn " id="srvce">
+                              <label class="control-label" id="lblWarrent"></label>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-5">
+
+                        <div class="row font-design">
+                            <div class="col-md-6">
+                              <label class="control-label" for="listCompany"><strong>වීදියේ නම | Street Name</strong></label>
+                            </div>
+                            <div class="col-md-1">
+                              <label class="al">:</label><span style="color: red;"></span>
+                            </div>
+                            <div class="col-md-5">
+                              <label class="control-label" id="lblStreet"></label>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+
+                  <div class="col-md-12">
+
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <div class="row font-design">
+                          <div class="col-md-8">
+                            <label class="control-label" for="listCompany"><strong>ප්‍රවර්තන වර්ෂයට අදාල මුදල | Year Rate</strong></label>
+                          </div>
+                          <div class="col-md-2">
+                            <label class="al">:</label><span style="color: red;"></span>
+                          </div>
+                          <div class="col-md-2 rightalgn " id="srvce">
+                            <label class="control-label" id="lblRate"></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-6">
+                           <div class="row font-design">
+                          <div class="col-md-5">
+                            <label class="control-label" for="listCompany"><strong>දේපල අංකය | Property NO</strong></label>
+                          </div>
+                          <div class="col-md-1">
+                            <label class="al">:</label><span style="color: red;"></span>
+                          </div>
+                          <div class="col-md-6">
+                            <label class="control-label" id="lblPropertyNo"></label>
+                          </div>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <div class="row">
+
+                  <div class="col-md-12">
+
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <div class="row font-design">
+                          <div class="col-md-8">
+                            <label class="control-label" for="listCompany"><strong>ඉදිරියට ගෙවු මුදල | Future</strong></label>
+                           
+                          </div>
+                          <div class="col-md-2">
+                            <label class="al">:</label><span style="color: red;"></span>
+                          </div>
+                          <div class="col-md-2 rightalgn " id="srvce">
+                            <label class="control-label" id="lblFuture"></label>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-6">
+                          <div class="row font-design">
+                            <div class="col-md-5">
+                              <label class="control-label" for="listCompany"><strong>ගෙවිය යුතු මුදල | Pay Amount</strong></label>
+                            </div>
+                            <div class="col-md-1">
+                              <label class="al">:</label><span style="color: red;"></span>
+                            </div>
+                            <div class="col-md-6">
+                              <input type="text" class="form-control" id="txtamt" placeholder="Enter payment amount"> 
+                            </div>
+                          </div>   
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+
+                  <div class="col-md-12">
+
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <div class="row font-design">
+                          <div class="col-md-8">
+                            <label class="control-label" for="listCompany"><strong>වට්ටම් මුදල | Discount</strong></label>
+                          </div>
+                          <div class="col-md-2">
+                            <label class="al">:</label><span style="color: red;"></span>
+                          </div>
+                          <div class="col-md-2 rightalgn " id="srvce">
+                            <label class="control-label" id="lblDiscount"></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-6">
+                      <div class="row font-design">
+                        <div class="col-md-5">
+                          <label class="control-label" for="listCompany"><strong>දුරකතන අංකය | Mobile</strong></label>
+                        </div>
+                        <div class="col-md-1">
+                          <label class="al">:</label><span style="color: red;"></span>
+                        </div>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" id="mob" placeholder="Enter mobile no for receive SMS.">
+                        </div>
+                      </div>   
+                </div>
+                  </div>
+                </div>
+
+                <div class="row">
+
+                  <div class="col-md-12">
+
+                    <div class="col-md-5">
+                      <div class="form-group">
+                          <div class="row font-design">
+                            <div class="col-md-8">
+                              <label class="control-label" for="listCompany"><strong>ගෙවිය යුතු මුළු මුදල(අද දිනට) | Due for Today</strong></label>
+                            </div>
+                            <div class="col-md-2">
+                              <label class="al">:</label><span style="color: red;"></span>
+                            </div>
+                            <div class="col-md-2 rightalgn " id="srvce">
+                              <label class="control-label" id="lblDue"></label>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-6">
+                      <div class="row font-design">
+                        <div class="col-md-5">
+                          <label class="control-label" for="listCompany"><strong>විද්‍යුත් තැපෑල | Email</strong></label>
+                        </div>
+                        <div class="col-md-1">
+                          <label class="al">:</label><span style="color: red;"></span>
+                        </div>
+                        <div class="col-md-6">
+                          <input type="email" class="form-control" id="email" placeholder="Enter email address for receive receipt.">
+                        </div>
+                      </div>   
+                </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+
+                    <div class="col-md-5">
+                      <div class="form-group">
+
+                          <div class="row font-design">
+                            <div class="col-md-8">
+                              <label class="control-label" for="listCompany"><strong><label class="control-label" id="lblCurrentYear"></label> වර්ෂය සඳහා ගෙවිය යුතු මුළු මුදල | Due for Year</strong></label>
+                             
+                            </div>
+                            <div class="col-md-2">
+                              <label class="al">:</label><span style="color: red;"></span>
+                            </div>
+                            <div class="col-md-2 rightalgn " id="srvce">
+                              <label class="control-label" id="lblTotDue"></label>
+                            </div>
+                            
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" id="nxtyrvalue1">
+                  <div class="col-md-12">
+
+                    <div class="col-md-5">
+                      <div class="form-group">
+
+                          <div class="row font-design">
+                            <div class="col-md-8">
+                              <label class="control-label" for="listCompany"><strong><label class="control-label" id="lblNextYear"></label> වර්ෂය සඳහා ගෙවිය යුතු මුදල | Due for Year</strong></label>
+                             
+                            </div>
+                            <div class="col-md-2">
+                              <label class="al">:</label><span style="color: red;"></span>
+                            </div>
+                            <div class="col-md-2 rightalgn " id="srvce">
+                              <label class="control-label" id="lblNextYearPayAmount"></label>
+                            </div>
+                            
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row"  id="nxtyrvalue2">
+                  <div class="col-md-12">
+
+                    <div class="col-md-5">
+                      <div class="form-group">
+
+                          <div class="row font-design">
+                            <div class="col-md-8">
+                              <label class="control-label" for="listCompany"><strong><label class="control-label" id="lblNextYear1"></label> වර්ෂය සඳහා ගෙවිය යුතු මුළු මුදල | Total Due amount for Year</strong></label>
+                             
+                            </div>
+                            <div class="col-md-2">
+                              <label class="al">:</label><span style="color: red;"></span>
+                            </div>
+                            <div class="col-md-2 rightalgn " id="srvce">
+                              <label class="control-label" id="lblNextYearTotPayAmount"></label>
+                            </div>
+                            
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="" id="msgErr"></div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                  <div class="col-md-5"></div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-6">
+                    <div align="right" class="view">
+                      <input type="hidden" id="ID" />
+                      <input type="hidden" id="customerID">
+                      <input type="hidden" id="loginType">
+                      <input type="hidden" id="userName">
+                      <input type="hidden" id="infoLoc">
+                      <button type="button" id="btnConfirm" title="submit" class="btn btn-success">Confirm
+                        Payment</button>
+                      <button type="button" id="saveDrft" title="draft" class="btn btn-warning">Payment
+                        History</button>
+                      <button type="button" id="reset" onclick="calltoinfopage();" title="back"
+                        class="btn btn-info">Back</button>
+                    </div>
+                  </div>
+                </div>
+                  <!-- <div class="col-md-1"></div> -->
+                </div><br>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div id="divFooter"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="../js/config.js"></script>
+<script src="js/RateConfig.js"></script>
+<script src="js/rate-payment.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script type="text/javascript" src="js/sweetalert2.all.js"></script>
+<script>
+  $("#divFooter").load('../footer.html');
+  $("#headerContent").load('../header.html');
+</script>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/password.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16">
+  <title>Login for online services</title>
+</head>
+
+<body class="responsive4">
+  <div class="header">
+    <div class="">
+      <div class="col-md-8">
+            
+      </div>
+    </div>
+    <div id="headerContent"></div>
+  </div>
+  <div class="container">
+    <div class="row"></div>
+    <br>
+    <div class="row">
+      <!-- <div class="card card-bg" style=" height:fit-content;"> -->
+        <div class="col-md-4"></div>
+        <div class="col-md-4 responsive" style="background-color: white;">
+        <div class="card-body">
+          <div class="container">
+            <h3 class="hred" style="text-align: center;">ප්‍රවේශය / LogIn</h3>
+          </div>
+          <br>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class=" control-label " for="email" id='lblUserName'>Email</label>
+                    <input type="email" class="form-control " id="email" placeholder="Enter Your Email">
+                    <span class="error-span" id='spanEmail'></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class=" control-label " for="pwd">Password:</label>
+                    <input type="password" class="form-control " id="pwd" placeholder="Enter Your Password">
+                    <span class="error-span" id='spanPwd'></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <div class="" id="msgErr"></div>
+                    <input type="hidden" id="hdType" value="mail">
+                    <ul class="panel-heading" style="padding-left:0;">
+                      <a href="forgotpassword.html" class="subMenu1" href=""><span class="subMenuHighlight">Forgot Password</span></a>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" id="bt1">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <ul class="panel-heading" style="padding-left:0;">
+                      <div class="col-sm-2 text-right " style="padding-left:0;">
+                        <input type="button" id="logUser" class="btn btn-info btn-blue" value="LOGIN">
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" id="bt2">
+                <div class="col-md-12">
+                  <div class="from-group">
+                    <button class="btn btn-primary" type="button" disabled>
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      Loading...
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    Login With Your <strong><a class="linkDisplay" id="eMail" onclick='swchMobile()'>Email</a>
+                      <a class="linkDisplay" id="tPhone" onclick='swchEmail()'>Mobile</a></strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <strong><a class="linkDisplay" id="signup" href="sign-up.html">Create Account</a></strong>
+                  </div>
+                </div>
+              </div>
+
+              <input type="hidden" id="viewlocationMain">
+              <input type="hidden" id="viewlocationUrl">
+              <input type="hidden" id="serviceTyp">
+
+        </div>
+        </div>
+    </div><br><br>
+  <div class="row">
+
+  </div>
+  <div id="divFooter" class="footer fixed-bottom p-0"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/sign.js"></script>
+
+<script>
+  $("#divFooter").load('footer.html');
+  $("#headerContent").load('header.html');
+</script>
+
+</html>

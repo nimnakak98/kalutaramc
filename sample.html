@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages Section</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            background-color: #f8f9fa;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .message-bar {
+            flex: 1;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .marquee {
+            flex: 2;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            height: 200px;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 10s linear infinite;
+        }
+        .marquee img {
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        @keyframes marquee {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="message-bar">
+            <h2>ගරු සභාපතිතුමාගේ පණිවිඩය</h2>
+            <p style="text-align: justify;">2018 වර්ෂයේ පැවති පළාත් පාලන මැතිවරණයේ දී අභිනවයෙන් පත් වූ කළුතර නගර සභාවේ ගරු සභාපති ලෙස මා පත් කර ගැනීමේ දී පක්ෂ භේදයකින් තොරව, සහජීවනයෙන් යුතුව, නගරයේ තිරසාර සංවර්ධනය ඇති කිරීම උදෙසා තීරණ ගැනීමේ ප්‍රථිපලයක් ලෙස සභාපති ලෙස මම පත් කිරීම පිළිබඳව මෙම නගර සභාවේ නාගරික මන්ත්‍රීන්ට හා මන්ත්‍රීවරියන්ට මාගේ කෘතඥතාවය පල කරමි.
+                කළුතර නගර සභාව පිහිටි පුණ්‍ය භූමිය ඉතා අනාධිමත් කාලයක සිටම වෙරළබඩ වෙළඳ නගරයකි. බහු ආගමික සහ බහු ජන වර්ග වලට අයත් ජනතාව සාමකාමීව ජීවත්වන මෙම පුරවරය තිරසාර සංවර්ධනයෙන් යුතු ප්‍රසන්න පුරවරයක් කිරීම මාගේ අරමුණයි. එම අරමුණ සාක්ෂාත් කර ගැනීම සඳහා මාගේ උපරිම ශක්තිය, කැපවීම හා කාර්යය මණ්ඩලය ඒ සඳහා මෙහෙයවීම මෙන්ම ඔවුන්ට අවශ්‍ය නායකත්වය ද නිරන්තරයෙන් දෙනු ලැබේ.<br>
+                <br>සාම ශ්‍රී දේශ ශක්ති එම්.එන්.එම්. අමීර්<br>
+                සභාපති – කළුතර නගර සභාව</p>        
+        </div>
+        <div class="marquee">
+            <div class="marquee-content">
+                <span><strong>නිවේදන</strong></span>
+                <!-- <img src="path_to_image2.jpg" alt="Image 2"> -->
+                <span>අය – වැය ලේඛන සහ අවසාන ගිණුම් කළුතර මහා නගර සභා පරීශ්‍රයට පැමිණ පරිශීලනය <br>කිරීමට හෝ ඒවායේ දෘඪ පිටපත් ලබා ගැනීමට හැකි බව කාරුණිකව දන්වා සිටිමි.<br>එල්.පී.මනෝජා එස් පතිරණ<br>නාගරික කොමසාරිස් – කළුතර මහ නගර සභාව</span>
+                <!-- <img src="path_to_image3.jpg" alt="Image 3">
+                <span>නිවීම් බදු සදහා වයසක්</span>
+                <img src="path_to_image4.jpg" alt="Image 4">
+                <span>නිවීම් බදු සදහා වයසක්</span> -->
+            </div>
+        </div>
+        <div class="message-bar">
+            <h2>ලේකම්තුමියගේ පණිවිඩය</h2>
+            <p style="text-align: justify;">අනාගතයේ දැක්ම පෙරදැරි කරගෙන කළුතර නගර සභාවේ මානව හා භෞතික සම්පත් ඵලදායි ලෙස හා කාර්යක්ෂමව කළමනාකරණය කරමින් නාගරික ජනතාවගේ සුභ සිද්ධිය උදෙසා පවතින නීතිමය වපසරිය තුල හැකි උපරිමයෙන් රාජකාරිය ඉටු කිරිම මාගේ අරමුණයි.
+                මුල්‍ය කළමනාකරණය, කසළ කළමනාකරණය, සෞඛ්‍ය හා සනිපාරක්ෂක සේවා, විථි පහන් නඩත්තුව, මංමාවත් සංවර්ධනය හා නඩත්තුව, පුස්තකාල හා ප්‍රජා සේවා මෙන්ම ගිනි නිවිමේ සේවාවද  ප්‍රශස්ත මට්ටමක පවත්වා ගැනිම මුලික අරමුණයි.
+                <br>ආර්.එල්.රණසිංහ,<br>
+                ලේකම් – කළුතර නගර සභාව</p>        
+        </div>
+    </section>
+</body>
+</html>

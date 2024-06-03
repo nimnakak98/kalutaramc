@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.banner {
+    height: 400px; /* Adjust height */
+    background-image: url('../images/bg/Untitled-21.jpg'); /* Banner image path */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.image-card {
+    width: 300px; /* Adjust card width */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+.elec {
+    /* Prefix required. Even Firefox only supports the -webkit- prefix */
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: black;
+    color: yellow;
+  }
+.button {
+    color: cornflowerblue;
+}
+button {
+    padding: 10px 20px;
+    background-color: #960417;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Style the icon */
+  .fa-arrow-left {
+    margin-right: 5px;
+  }
+
+  /* Style the link inside the button */
+  button a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .caxx {
+    padding-top: 20px;
+  }

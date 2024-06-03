@@ -1,0 +1,40 @@
+.container-let {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+    /* Table styling */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        border: 1px solid #360909;
+        text-align: center;
+        padding: 8px;
+        background-color: rgb(221, 220, 136);
+        color: #000000;
+        font-weight: bold;
+    }
+
+    td {
+        color: black;
+    }
+
+    .nekci {
+        color: black;
+        text-align: justify;
+    }
+
+    .sixit {
+        color: brown;
+    }
+    
+    .highlight {
+        background-color: rgb(230, 139, 87);
+        font-weight: bold;
+    }
+    

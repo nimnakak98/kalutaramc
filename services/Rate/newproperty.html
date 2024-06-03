@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="icon" href="../favicon.ico" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>Add new property</title>
+
+    <style>
+        .mobile_height {
+          height: 50px;
+        }
+    
+        #label {
+          width: 100%;
+        }
+    
+    
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+    
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: #f1f1f1;
+          position: relative;
+          padding-bottom: 58px;
+          min-height: 100vh;
+        }
+    
+        @media(min-width:768px) {
+          .table1 {
+            table-layout: fixed;
+          }
+        }
+    </style>
+</head>
+<body class="responsive4">
+    <div id="modelDiv" class="modal fade in" style="background-color: black;opacity: 0.5;z-index: 999;"></div>
+    <div class="header">
+        <div id="headerContent"></div>
+    </div><br>
+    <div class="container"  style="background-color: white;">
+        <div class="row minHight">
+            <div class="col-md-12">
+
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <p class="sub-tp"><strong id="topic">Add New Property</strong>
+                        <div class="" id="msgSuccess"></div>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="row well">
+                    <div class="col-md-12">
+                        <div class="loader preLoad"></div>
+                        <div>
+                            <input type="button" id="btnByDiv" value="By Street" class="btn btn-success btn" />
+                            <input type="button" id="btnByNo" value="By Custom Number" class="btn btn-primary btn" />
+                        </div>
+                        <div id="error" style="color:red;"></div><br>
+                        <div>
+                            <div class="row">
+                                <div class="col-md-6"><br>
+
+                                   
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="control-label" for="listCompany">අයත් කාර්යාලය /උප
+                                                    කාර්යාලය |
+                                                    Branch / Sub office</label><span style="color: red;">*</span>
+                                                <select class="form-control" data-val="true"
+                                                    data-val-required="The Company field is required." id="listCompany"
+                                                    name="listCompany">
+                                                    <option value="">- Select Branch/Sub office -</option>
+                                                </select>
+                                                <span class="field-validation-valid" data-valmsg-for="listCompany"
+                                                    data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div id="divByDiv">
+
+                                        
+                                        <div class="row" id="divDiv">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label" for="listDiv">කොට්ඨාශය |
+                                                        Division</label><span style="color: red;">*</span>
+                                                    <select class="form-control" data-val="true"
+                                                        data-val-required="The Company field is required." id="listDiv"
+                                                        name="listDiv">
+                                                        <option value="">- Select Division -</option>
+                                                    </select>
+                                                    <span class="field-validation-valid" data-valmsg-for="listDiv"
+                                                        data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+
+                                        
+                                        <div class="row" id="divStreet">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label" for="listStreet">මාර්ගය | Street
+                                                        Name</label><span style="color: red;">*</span>
+                                                    <select class="form-control" data-val="true"
+                                                        data-val-required="The Company field is required."
+                                                        id="listStreet" name="listStreet">
+                                                        <option value="">- Select Street -</option>
+                                                    </select>
+                                                    <span class="field-validation-valid" data-valmsg-for="listStreet"
+                                                        data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                       
+                                        <div class="row" id="divProperty">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label" for="listProperty">වරිපනම් අංකය |
+                                                        Property
+                                                        No</label><span style="color: red;">*</span>
+                                                    <select class="form-control" data-val="true"
+                                                        data-val-required="The Company field is required."
+                                                        id="listProperty" name="listProperty">
+                                                        <option value="">- Select Property -</option>
+                                                    </select>
+                                                    <span class="field-validation-valid" data-valmsg-for="listProperty"
+                                                        data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      
+                                    </div>
+
+                                    <div id="divByNo">
+                                        <div class="row" id="">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label" for="listDiv">පාරිභෝගික අංකය | Custom
+                                                        NO</label><span style="color: red;">*</span>
+                                                    <input type="text" value="" id="txtCusNo" class="form-control"
+                                                        placeholder="Enter custom number" />
+                                                    <br><input type="button" class="btn btn-warning" value="Search"
+                                                        title="" id="btnSearch" onclick="return search();" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="col-md-6">
+                                    <div id="divDetails">
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="control-label">දේපල විස්තරය | Property
+                                                    Description</label><br>
+                                                <span id="lblDesc"></spa>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="control-label">අයතිකරුගේ නම | Owner Name</label><br>
+                                                <span id="lblOwner"></spa>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="control-label">තක්සේරුව | Annual Value</label><br>
+                                                <span id="lblAV"></spa>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <span style="color: red;">ඔබගේ අංකය ගිණුමට ඇතුලත් කර ගැනීමට "Confirm &
+                                                    Add"
+                                                    Button Click කරන්න</span>
+                                                <br><input type="button" class="btn btn-warning" value="Confirm & Add"
+                                                    title="" id="btnConfirm" onclick="return confirm();" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <input type="hidden" id="customerID">
+    <input type="hidden" id="propertyID">
+    <input type="hidden" id="username">
+    <input type="hidden" id="loginType">
+    <div id="divFooter"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- <script src="js/property_select.js"></script> -->
+
+<script src="../js/config.js"></script>
+<script src="js/RateConfig.js"></script>
+<script src="js/new-property.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script type="text/javascript" src="js/sweetalert2.all.js"></script>
+<script>
+    $("#divFooter").load('../footer.html');
+    $("#headerContent").load('../header.html');
+</script>
+
+</html>

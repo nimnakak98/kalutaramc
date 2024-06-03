@@ -1,0 +1,29 @@
+    .messages-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 50px auto;
+    }
+    
+    .message {
+        text-align: center;
+    }
+    
+    .message img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    
+    .message h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    .message p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5;
+    }

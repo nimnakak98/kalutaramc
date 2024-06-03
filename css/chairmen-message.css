@@ -1,0 +1,44 @@
+    /* Container styling */
+    .container-let {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Section styling */
+    .chairman-sections {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+
+    /* Image styling */
+    .chairmaan-image {
+        max-width: 200px;
+        height: auto;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+    /* Message styling */
+    .chairman-messages {
+        flex: 1;
+    }
+
+    /* Media Query for responsiveness */
+    @media (max-width: 768px) {
+        .chairman-sections {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .chairmaan-image {
+            margin: 0 0 20px 0;
+        }
+    }
+
+    .pizus {
+        text-align: justify;
+        color: black;
+    }

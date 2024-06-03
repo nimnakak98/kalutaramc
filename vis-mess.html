@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: #ccc;
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .box::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.3s ease;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .box:hover::before {
+      transform: translate(-50%, -50%) scale(3);
+    }
+    .box a {
+      text-decoration: none;
+      color: #000;
+      z-index: 2;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box">
+    <a href="services-internet-page.html">Services Internet</a>
+  </div>
+  <div class="box">
+    <a href="rti-page.html">RTI</a>
+  </div>
+  <div class="box">
+    <a href="another-page.html">Another Topic</a>
+  </div>
+  <div class="box">
+    <a href="yet-another-page.html">Yet Another Topic</a>
+  </div>
+</div>
+
+</body>
+</html>

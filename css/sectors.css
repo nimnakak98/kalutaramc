@@ -1,0 +1,35 @@
+.image-cards-section {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to next line */
+    justify-content: space-between; /* Distribute items evenly */
+    padding: 20px; /* Adjust as needed */
+}
+.image-card {
+    flex: 0 0 calc(25% - 10px); /* Adjust width to fit 4 items in one line with reduced margins */
+    margin-bottom: 20px; /* Adjust space between rows */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer; /* Add pointer cursor to indicate clickable */
+}
+.image-card img {
+    width: 100%; /* Take full width of container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+.image-card h3 {
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Add padding for better appearance */
+    background-color: #f0f0f0; /* Add background color to topic */
+    text-align: center; /* Center text */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .image-cards-section {
+        flex-direction: column; /* Display items vertically */
+    }
+    .image-card {
+        flex: 0 0 100%; /* Take full width on smaller screens */
+    }
+}

@@ -1,0 +1,154 @@
+<style type="text/css">
+        .parent-container div {
+            font-weight: 600;
+            font-size: 20px;
+            margin: 2px;
+            box-sizing: content-box;
+        }
+
+        .text-bottom {
+            color: #444;
+        }
+
+        .link:hover {
+            text-decoration: none;
+        }
+
+
+
+        #static {
+            height: 100px;
+        }
+
+        #relative {
+            position: relative;
+            background: rgba(252, 255, 255);
+            border-radius: -0px;
+            padding: 25px 10px 10px 10px;
+        }
+
+        .absolute {
+
+            bottom: -4px;
+            text-align: center;
+            color: rgb(189, 182, 182);
+            right: 0;
+            width: 100%;
+
+        }
+
+        #parent-container {
+
+            border-radius: 6px;
+            width: 250px;
+            /* padding: 10px; */
+            position: relative;
+            background-color: #d43190;
+            margin-bottom: 10px;
+        }
+
+        .parent-container div {
+            font-weight: 500;
+            font-size: 14px;
+            /* margin: 10px; */
+            box-sizing: border-box;
+        }
+
+        .text-bottom {
+            color: #444;
+        }
+
+        .link:hover {
+            text-decoration: none;
+        }
+
+
+
+        #static {
+            height: 500px;
+        }
+
+        #relative {
+            position: relative;
+            background: rgba(252, 252, 252, .1);
+            border-radius: 5px;
+            padding: 25px 10px 10px 10px;
+        }
+
+        .absolute {
+            position: absolute;
+            bottom: -20px;
+            text-align: center;
+            color: #fff;
+            right: 0;
+            width: 100%;
+
+        }
+
+        #parent-container {
+
+            border-radius: 6px;
+            padding: 10px;
+            position: relative;
+            background-color: #d43190;
+            margin-bottom: 10px;
+        }
+
+        #fixed {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            width: 100%px
+        }
+
+        .absolute h1 {
+            margin: 0;
+        }
+
+        .text-bottom {
+            margin-top: 0px;
+            text-align: center;
+        }
+    </style>
+        <style>
+        .buttnS {
+            background-color: #3498DB;
+            box-shadow: 0px 15px 0px 0px #258cd1;
+            text-decoration: none;
+            color: #ffffff;
+            background: #040b63e3;
+            font-size: 16px;
+            border-radius: 50px;
+            box-shadow: 0px 6px 0px 0px #b2db34, 0px 0px 20px 0px #bbb;
+            transition: all 0.2s;
+        }
+
+        .buttnC {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+
+        .img-right {
+            float: right;
+            width: 25px;
+            margin-top: -20px;
+        }
+
+        .clearSec {
+            width: 100%;
+        }
+
+        .mainSec {
+            max-width: 800px;
+            text-align: center;
+            clear: both;
+            margin: 50px auto;
+        }
+
+        .mainSec .colSec {
+            display: inline-block;
+        }
+
+        /*media quary*/
+    </style>

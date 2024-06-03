@@ -1,0 +1,103 @@
+/* vision-mission */
+.rabuda {
+    background-color: #044f5c; /* Background color for the section */
+    padding: 10px 0; /* Add some padding to the top and bottom */
+  }
+
+.grid-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr); /* Default to a single column */
+  gap: 30px;
+  margin: 50px auto;
+  max-width: 1500px;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on larger screens */
+  }
+}
+
+@media (min-width: 2024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on even larger screens */
+  }
+}
+
+.grid-item {
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #3bbefb;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.circle-icon {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  margin: -40px auto 0 auto;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  border: 2px solid #fbb03b;
+}
+
+.circle-icon img {
+  width: 80%;
+  height: auto;
+}
+
+.pop-heading {
+  margin-bottom: 10px;
+  color: #fbb03b;
+}
+
+.pop-heading:hover {
+    margin-bottom: 10px;
+    color: #30c7e2;
+  }
+
+.paragraph {
+  font-size: 16px;
+  color: aliceblue;
+}
+
+/* cool hover effect */
+.grid-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* lift up effect */
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.grid-item:hover::before {
+  opacity: 1;
+}

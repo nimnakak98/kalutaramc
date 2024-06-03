@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/footer.css"> 
+        <link rel="icon" href="../favicon.ico" type="image/gif" sizes="16x16">   
+        <link rel="stylesheet" href="../css/common.css">
+        <title>My property list</title>  
+        
+        <style>
+            .mobile_height {
+              height: 50px;
+            }
+        
+            #label {
+              width: 100%;
+            }
+        
+        
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+        
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+              background-color: #f1f1f1;
+              position: relative;
+              padding-bottom: 58px;
+              min-height: 100vh;
+            }
+        
+            @media(min-width:768px) {
+              .table1 {
+                table-layout: fixed;
+              }
+            }
+        </style>
+    </head>
+    <body class="responsive4">
+        <div id="modelDiv" class="modal fade in" style="background-color: black;opacity: 0.5;z-index: 999;"></div>
+        <div class="header">       
+            <div id="headerContent"></div>           
+        </div><br>
+        <div class="container" style="background-color: white;">
+            <div class="row minHight">
+                <div class="col-md-12">
+                    
+                    <div class="row">
+                        <div class="col-md-12 ">
+                          <p class="sub-tp"><strong id="topic"></strong>
+                            <div class="" id="msgSuccess"></div>
+                        </p>
+                        </div>
+                        </div>
+
+                        <div class="row well">
+                        <div class="col-md-12">
+                            <div class="loader preLoad" id="loading-image"></div>
+                            <div class="row view">
+                                <div class="col-md-12">
+                            <button type="button" onclick="newproperty();" class="btn btn-success btn">Add New Property</button>
+                        </div>
+                      </div>
+                  <br>
+                  <div id="list" class="table-responsive"></div>
+                  <br>  
+                    <div class="row">
+                        <div id="error" style="color:red;"></div>
+                    </div>
+                      
+                    </div>
+                </div>
+            </div>            
+        </div>
+        </div>
+        <br>
+        <input type="hidden" id="customerID">
+        <input type="hidden" id="serviceTyp">
+        <div id="divFooter"></div>         
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <script src="../js/config.js"></script>
+    <script  src="js/RateConfig.js"></script>
+    <script  src="js/mylist.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="text/javascript" src="js/sweetalert2.all.js" ></script>
+    <script>
+        $("#divFooter").load('../footer.html');
+        $("#headerContent").load('../header.html');
+    </script>
+</html>

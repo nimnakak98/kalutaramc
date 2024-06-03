@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+}
+
+.containere {
+    display: flex;
+}
+
+.left-section {
+    width: 30%;
+    padding: 20px;
+}
+
+.right-section {
+    width: 70%; /* Adjust width to fit three cards */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.photo-card {
+    width: 30%; /* Set width to 30% for three cards per row */
+    margin: 1%; /* Add margin for spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.photo-card img {
+    width: 100%;
+    object-fit: cover; /* Ensure images cover the container without stretching */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.photo-card p {
+    padding: 10px;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .containere {
+        flex-direction: column;
+    }
+
+    .left-section {
+        display: none;
+    }
+
+    .right-section {
+        width: 100%;
+    }
+
+    .photo-card {
+        width: 90%;
+        margin: 5% auto; /* Center the card with margin */
+    }
+}
+
+/* Style for servicex-list and its hover state */
+.servicex-list li {
+    color: rgb(1, 1, 145);
+    list-style: none;
+}
+
+.servicex-list li a {
+    color: rgb(1, 1, 145);
+    text-decoration: none;
+}
+
+.servicex-list li a:hover {
+    color: royalblue;
+}
+
+/* Add style for the line */
+.line {
+    display: none; /* Hide the line by default */
+    width: 1px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+/* Media query for desktop devices */
+@media screen and (min-width: 769px) {
+    .line {
+        display: block; /* Show the line for desktop view */
+    }
+}
+
+.elex {
+    margin: 5px 0;
+}

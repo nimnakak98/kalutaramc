@@ -1,0 +1,57 @@
+        /* Container styling */
+        .history {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 10px;
+        }
+
+        /* Card styling */
+        .history-card {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Text styling */
+        .pixy {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .histr {
+            margin-bottom: 0;
+            color: black;
+            text-align: justify;
+        }
+
+        /* Image styling */
+        .history-image {
+            max-width: 100%;
+            height: 300px;
+            border-radius: 5px;
+            display: block;
+            margin-left: auto; /* Center the image horizontally */
+            margin-right: auto; /* Center the image horizontally */
+            padding-bottom: 8px;
+        }
+
+        .youtube-diya {
+            border-radius: 5px;
+            display: block;
+            margin-left: auto; /* Center the image horizontally */
+            margin-right: auto; /* Center the image horizontally */
+            padding-top: 8px;
+        }
+
+        .para {
+            height: 200px;
+            max-width: 100%;
+            border-radius: 5px;
+            display: block;
+            margin-left: auto; /* Center the image horizontally */
+            margin-right: auto; /* Center the image horizontally */
+            padding-bottom: 8px;
+        }
+

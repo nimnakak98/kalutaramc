@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/password.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16">
+  <title>Sign Up</title>
+</head>
+<body class="responsive4">
+  <div class="header">
+    <div class="">
+      <div class="col-md-8"></div>
+    </div>
+    <div id="headerContent"></div>
+  </div>
+  <div class="container">
+    <div class="row"></div>
+    <br>
+    <div class="row">
+      <div class="card card-bg responsive2" style=" height:fit-content;">
+        <div class="card-body">
+          <div class="container">
+            <h3 class="hred" style="text-align: center;">Sign Up</h3>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class=" control-label " for="name" id='lblName'><strong>Name</strong></label><span
+                  style="color: red;">*</span>
+                <input type="text" class="form-control " id="txtName" placeholder="Enter Your Name">
+                <span class="error-span" id='spanName'></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class=" control-label " for="lblAddress"><strong>Address</strong></label>
+                <input type="text" class="form-control " id="txtAddress" placeholder="Enter Your Address">
+                <span class="error-span" id='spanAddress'></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class=" control-label " for="lblMobile"><strong>Mobile</strong></label><span
+                  style="color: red;">*</span>
+                <input type="number" class="form-control " id="txtMob" placeholder="Enter Your Mobile">
+                <span class="error-span" id='spanMobile'></span>
+              </div>
+              <span id=""></span>
+              <div id="" ></div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class=" control-label " for="lblEmail"><strong>Email</strong></label>
+                <input type="email" class="form-control " id="txtEmail" placeholder="Enter Your Email">
+                <span class="error-span" id='spanEmail'></span>
+              </div>
+              <div id="">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class=" control-label " for="lblpass"><strong>Password</strong></label>
+                <input type="password" id="txtPass" class="form-control" placeholder="Password">
+                <span class="field-validation-valid" data-valmsg-for="listCompany" data-valmsg-replace="true"></span>
+              </div>
+              <span id="msg"></span>
+              <div id="error" style="color:red;"></div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class=" control-label " for="lblConfpass"><strong>Confirm Password</strong></label>
+                <input type="password" id="txtConfPass" class="form-control" placeholder="Enter Confirm password">
+              </div>
+              <div id="error" style="color:red;">
+              </div>
+            </div>
+          </div>
+
+          <div style="margin: -10px; margin-left: 40px; margin-top: -20px;">
+            <span id="error-msg" style="color:red; display: block;"></span>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12 text-left">
+              <div class="from-group">
+                <span id="msg"></span>
+                <div id="error" style="color:red;"></div>
+                <div style="margin: -10px; margin-left: 40px; margin-top: -20px;">
+                  <span id="error-msg" style="color:red; display: block;"></span>
+                </div><br>
+                <input type="checkbox" onclick="showPassword()"> Show Password
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <div class="row">
+            <div class="col-md-12 ">
+              <div class="from-group">
+                <strong><a class="linkDisplay" id="signup" href="sign-in.html">Sign in instead</a></strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="bt1">
+            <div class="col-md-12 text-right">
+              <div class="from-group">
+                <input style="text-align: right;" type="button" id="signUp" class="btn btn-info btn-blue "
+                  value="Sign Up" onclick="SignUp();">
+              </div>
+            </div>
+          </div>
+
+          <div class="row" id="bt2">
+            <div class="col-md-12 text-right">
+              <div class="from-group">
+                <button class="btn btn-primary" type="button" disabled>
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  Loading...
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- <div class="mb-lg-4"><br>
+    </div> --><br><br>
+    <div class="row">
+
+    </div>
+    <div id="divFooter" class="footer fixed-bottom p-0"></div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/sign-up.js"></script>
+
+<script>
+  var councilName = getCouncilName();
+  $("#changeTopic").text(councilName);
+
+  function signin() {
+    window.location = "sign-in.html";
+  }
+</script>
+<script>
+  $("#headerContent").load('header.html');
+  $("#divFooter").load('footer.html');
+
+</script>
+
+</html>

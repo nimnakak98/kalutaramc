@@ -1,0 +1,12 @@
+.list-of-instructions{
+    position: sticky;
+    width: 80%;
+   /* text-align: center; */
+}
+
+btnContinue:disabled,
+btnContinue[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
