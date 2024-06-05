@@ -1,6 +1,6 @@
 <!-- Developed by: H. K. Nimnaka Yasith Ravishan Kumaradasa
-Date: 03/04/2024
-Time: 09:45 AM
+Date: 05/06/2024
+Time: 12:16 PM
 Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a -->
 
 <!DOCTYPE html>
@@ -8,13 +8,13 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
 
 <head>
     <meta charset="utf-8">
-    <title>Home - Kalutara Municipal Council Official Website</title>
+    <title>முகப்புப்பக்கம் - களுத்துறை பெருநகர சபையின் உத்தியோகபூர்வ இணையத்தளம்</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="images/logo/MC LOGO.jpg" rel="icon">
+    <link href="../images/logo/MC LOGO.jpg" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,20 +26,20 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/vision-mission.css" rel="stylesheet"/>
-    <link href="css/messages.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/vision-mission.css" rel="stylesheet"/>
+    <link href="../css/messages.css" rel="stylesheet"/>
     <!-- This is clock styles which is represent in top bar -->
-    <link href="css/clock.css" rel="stylesheet" />
-    <link href="css/pops.css" rel="stylesheet"/>
+    <link href="../css/clock.css" rel="stylesheet" />
+    <link href="../css/pops.css" rel="stylesheet"/>
 
     <style>
         /*** For Marquee Styles ***/
@@ -55,9 +55,9 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
             }
         }
 
-        @font-face { 
-            font-family: "mySecondFont";
-            src: url(fonts/dashicons.ttf);
+        @font-face { /*** Mannually added nirmala font because of the 'ර්' problem ***/
+            font-family: "myFirstFont";
+            src: url(../fonts/Bamini.ttf) format("truetype");
         }
 
         /*** THIS IS IMAGE BAR'S STYLES STARTS***/
@@ -108,128 +108,125 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-        <img class="position-absolute top-50 start-50 translate-middle" src="images/logo/MC LOGO.jpg" style="height: 65px; width: 65px;" alt="Icon">
+        <img class="position-absolute top-50 start-50 translate-middle" src="../images/logo/MC LOGO.jpg" style="height: 65px; width: 65px;" alt="Icon">
     </div>
     <!-- Spinner End -->
+
+<!-- Overlay -->
+<div id="overlay"></div>
 
 <!-- Popup frame with image and close button -->
 <div id="popup">
     <!-- Image to be displayed in the popup -->
-    <img src="images/bg/Untitled-1.jpg" alt="popup image">
+    <img src="../images/bg/Untitled-1.jpg" alt="popup image">
     <!-- Close button -->
     <button id="close">Close</button>
 </div>
 
-<!-- Include jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script>
-    // When the page loads, show the popup
-    $(document).ready(function () {
-        $("#popup").fadeIn(1000); // Fade in the popup
-    });
-
-    // Close the popup when the close button is clicked
-    $("#close").on("click", function (e) {
-        e.preventDefault();
-        $("#popup").fadeOut(1000); // Fade out the popup
-    });
-</script>
-
-<!-- Topbar Start -->
-<div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
-    <div class="row gx-0 d-none d-lg-flex">
-        <div class="col-lg-7 px-5 text-start">
-            <!-- This is clock section which is represent in top bar - Start -->
-            <div class='time' id='time'>
-
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <!-- This is clock section which is represent in top bar - Start -->
+                <div class='time' id='time'></div>
+                <!-- This is clock styles which is represent in top bar - End -->
             </div>
-            <!-- This is clock styles which is represent in top bar - End -->
-        </div>
-        <div class="col-lg-5 px-5 text-end">
-            <div class="h-100 d-inline-flex align-items-center py-3 me-2">
-                <a class="text-body px-2" href="tel:+0342 222 275"><i class="fa fa-phone-alt text-primary me-2"></i>+0342 222 275</a>
-                <a class="text-body px-2" href="mailto:uckalutara22@gmail.com"><i class="fa fa-envelope-open text-primary me-2"></i>uckalutara22@gmail.com</a>
-            </div>
-            <div class="h-100 d-inline-flex align-items-center">
-                <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
-                <!-- <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-sm-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a> -->                
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-2">
+                    <a class="text-body px-2" href="tel:+0342 222 275"><i class="fa fa-phone-alt text-primary me-2"></i>+0342 222 275</a>
+                    <a class="text-body px-2" href="mailto:uckalutara22@gmail.com"><i class="fa fa-envelope-open text-primary me-2"></i>uckalutara22@gmail.com</a>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <!-- <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a> -->                
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Topbar End -->
+    <!-- Topbar End -->
 
-<a href="en-home.html" style="display: block; text-align: center;">
-    <img src="images/logo/Untitled-2.jpg" alt="Kalutara Municipal Council" title="Kalutara Municipal Council" style="max-width: 100%; height: auto; margin: 0 auto;">
-</a>      
+    <a href="../tamil/ta-home.html" style="display: block; text-align: center;">
+        <img src="../images/logo/Untitled-1.jpg" alt="Kalutara Municipal Council" title="Kalutara Municipal Council" style="max-width: 100%; height: auto; margin: 0 auto;">
+    </a>  
 
-<!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-    <a href="en-home.html" class="navbar-brand ms-4 ms-lg-0">
-        <!-- <h1 class="text-primary m-0"><img class="me-3" src="images/logo/MC LOGO.jpg" alt="Icon">කළුතර මහා නගර සභාව</h1> -->
-    </a>
-    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0" style="font-family: mySecondFont; font-size: 14px;">
-            <a href="en-home.html" class="nav-item nav-link active">Home</a>
-            <!-- <a href="about.html" class="nav-item nav-link"></a> -->
-            <!-- <a href="service.html" class="nav-item nav-link">සේවාවන්</a> -->
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
-                <div class="dropdown-menu border-0 m-0">
-                    <a href="vision-missioneng.html" class="dropdown-item">Vision & Mission</a>
-                    <a href="introductioneng.html" class="dropdown-item">Establishment</a>
-                    <a href="historyeng.html" class="dropdown-item">History</a>
-                    <a href="sectorseng.html" class="dropdown-item">Functional Divisions of the Municipal Council</a>
-                    <a href="managementeng.html" class="dropdown-item">Council Management</a>
-                </div>
-            </div>                
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
-                <div class="dropdown-menu border-0 m-0">
-                    <a href="free-ayurvediceng.html" class="dropdown-item">Free Ayurvedac Medical Service</a>
-                    <a href="trash-managementeng.html" class="dropdown-item">Waste Management</a>
-                    <a href="fireeng.html" class="dropdown-item">Fire Service</a>
-                    <a href="#" class="dropdown-item">Administration by Health Divisions</a>
-                    <a href="libraryeng.html" class="dropdown-item">Public Library</a>
-                    <a href="crematoriumeng.html" class="dropdown-item">Cremation Service</a>
-                    <a href="public-marketeng.html" class="dropdown-item">Public Stores</a>
-                    <a href="playgroundeng.html" class="dropdown-item">Playground Service</a>
-                    <a href="preschooleng.html" class="dropdown-item">Preschool Service</a>
-                    <a href="weeklymarketeng.html" class="dropdown-item">Weekly Market Service</a>
-                    <a href="roaddeveng.html" class="dropdown-item">Road Development</a>
-                    <a href="childreneng.html" class="dropdown-item">Children’s Parks</a>
-                    <a href="serviceseng.html" class="dropdown-item">More Services</a>
-                </div>
-            </div>
-            <a href="https://kalutara.mc.gov.lk/services/index.html" class="nav-item nav-link">Internet Payments</a>
-            <a href="galleryeng.html" class="nav-item nav-link">Gallery</a>
-            <a href="downloadseng.html" class="nav-item nav-link">Downloads</a>
-            <a href="inquiryeng.html" class="nav-item nav-link">Your Complaints and Comments</a>
-        </div>
-        <a href="contactuseng.html" class="btn btn-primary py-2 px-4 d-none d-lg-block">Contact Us</a>
-        <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Languages</a>
-            <div class="dropdown-menu border-0 m-0">
-                <a href="home.html" class="dropdown-item">සිංහල</a>
-                <a href="ta-home.html" class="dropdown-item">தமிழ்</a>
-                <a href="en-home.html" class="dropdown-item">English</a>
-            </div>
-        </div>
+    <!-- Additional Avurud Banner Starts  Here
+    <div class="container-puzzle">
+        <div id="countdown" class="countdown">අලුත් අවුරුදු උදාවට තව දින.. </div>
+        <img src="images/logo/bannersin.jpg" alt="Avurudu-Banner" class="background-image">
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
     </div>
-</nav>
-<!-- Navbar End -->
+    Addtional Avurudu  Banner Ends Here -->    
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="../tamil/ta-home.html" class="navbar-brand ms-4 ms-lg-0">
+            <!-- <h1 class="text-primary m-0"><img class="me-3" src="images/logo/MC LOGO.jpg" alt="Icon">කළුතර මහා නගර සභාව</h1> -->
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0" style="font-family: myFirstFont; font-size: 14px;">
+                <a href="../tamil/ta-home.html" class="nav-item nav-link active">முகப்பு</a> <!-- Home -->
+                <!-- <a href="about.html" class="nav-item nav-link"></a> -->
+                <!-- <a href="service.html" class="nav-item nav-link">සේවාවන්</a> -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">எங்களை பற்றி</a> <!-- About us -->
+                    <div class="dropdown-menu border-0 m-0">
+                        <a href="../tamil/ta-vision-mission.html" class="dropdown-item">தொலை நோக்கு - பணிக் கூற்று</a> <!-- දැක්ම මෙහෙවර -->
+                        <a href="../tamil/ta-introduction.html" class="dropdown-item">அறிமுகம்</a> <!-- හැඳින්වීම -->
+                        <a href="../tamil/ta-history.html" class="dropdown-item">வரலாறு</a> <!-- ඉතිහාසය -->
+                        <a href="../tamil/ta-sectors.html" class="dropdown-item">நகராட்சி மன்றத்தின் செயல்பாட்டு பிரிவுகள்</a> <!-- නගර සභාවේ ක්‍රියාත්මක අංශ -->
+                        <a href="../tamil/ta-management.html" class="dropdown-item">கவுன்சில் நிர்வாகம்</a> <!-- සභා කළමණාකරනය -->
+                    </div>
+                </div>                
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">சேவைகள</a> <!-- සේවාවන් -->
+                    <div class="dropdown-menu border-0 m-0">
+                        <a href="../tamil/ta-free-ayurvedic.html" class="dropdown-item">இலவச ஆயுர்வேத மருத்துவ சேவை</a> <!-- නිදහස් ආයුර්වේද වෛද්‍ය සේවය -->
+                        <a href="../tamil/ta-trash-management.html" class="dropdown-item">கழிவு மேலாண்மை</a> <!-- කසළ කළමණාකරනය -->
+                        <a href="../tamil/ta-fire.html" class="dropdown-item">தீயணைப்பு சேவை</a> <!-- ගිනි නිවීමේ සේවාව -->
+                        <a href="../404.html" class="dropdown-item">சுகாதார பிரிவு நிர்வாகம்</a> <!-- සෞඛ්‍ය කොට්ඨාශ අනුව පරිපාලනය -->
+                        <a href="../tamil/ta-library.html" class="dropdown-item">பொது நூலகம்</a> <!-- මහජන පුස්තකාලය -->
+                        <a href="../tamil/ta-crematorium.html" class="dropdown-item">தகனம் செய்யும் சேவைகள்</a> <!-- ආදාහනාගාර සේවා -->
+                        <a href="../tamil/ta-public-market.html" class="dropdown-item">பொது கடைகள்</a> <!-- පොදු වෙළදසැල් -->
+                        <a href="../tamil/ta-playground.html" class="dropdown-item">விளையாட்டு மைதான சேவைகள்</a> <!-- ක්‍රීඩාපිටි සේවා -->
+                        <a href="../tamil/ta-preschool.html" class="dropdown-item">பாலர் சேவைகள்</a> <!-- පෙර පාසැල් සේවා -->
+                        <a href="../tamil/ta-weeklymarket.html" class="dropdown-item">வாராந்திர சேவைகள்</a> <!-- සතිපොළ සේවා -->
+                        <a href="../tamil/ta-roaddev.html" class="dropdown-item">சாலை அபிவிருத்தி</a> <!-- මාර්ග සංවර්ධනය -->
+                        <a href="../tamil/ta-children.html" class="dropdown-item">குழந்தைகள் தோட்டங்கள்</a> <!-- ළමා උද්‍යාන -->
+                        <a href="../tamil/ta-services.html" class="dropdown-item">மேலும் சேவைகள்...</a> <!-- තවත් සේවාවන් -->
+                    </div>
+                </div>
+                <a href="https://kalutara.mc.gov.lk/services/index.html" class="nav-item nav-link">இணைய சேவை</a> <!-- අන්තර්ජාල සේවා -->
+                <a href="../tamil/ta-gallery.html" class="nav-item nav-link">கேலரி</a> <!-- ගැලරිය -->
+                <a href="../tamil/ta-downloads.html" class="nav-item nav-link">பதிவிறக்கங்கள்</a> <!-- බාගතකිරීම් -->
+                <a href="../tamil/ta-inquiry.html" class="nav-item nav-link">உங்கள் புகார்கள், கருத்துகள்</a> <!-- ඔබගේ පැමිණිලි, අදහස් -->
+            </div>
+            <a href="contactus.html" class="btn btn-primary py-2 px-4 d-none d-lg-block">எங்களை தொடர்பு கொள்ள</a> <!-- අප අමතන්න -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Languages</a>
+                <div class="dropdown-menu border-0 m-0">
+                    <a href="../home.html" class="dropdown-item">සිංහල</a>
+                    <a href="./tamil/ta-home.html" class="dropdown-item">தமிழ்</a>
+                    <a href="../en-home.html" class="dropdown-item">English</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative" data-dot="<img src='images/crousel/edited/Untitled-1.jpg'>">
-                <img class="img-fluid" src="images/crousel/edited/Untitled-1.jpg" alt="">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='../images/crousel/edited/Untitled-1.jpg'>">
+                <img class="img-fluid" src="../images/crousel/edited/Untitled-1.jpg" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -242,8 +239,8 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='images/crousel/edited/Untitled-2.jpg'>">
-                <img class="img-fluid" src="images/crousel/edited/Untitled-2.jpg" alt="">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='../images/crousel/edited/Untitled-2.jpg'>">
+                <img class="img-fluid" src="../images/crousel/edited/Untitled-2.jpg" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -256,8 +253,8 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='images/crousel/edited/Untitled-6.jpg'>">
-                <img class="img-fluid" src="images/crousel/edited/Untitled-6.jpg" alt="">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='../images/crousel/edited/Untitled-6.jpg'>">
+                <img class="img-fluid" src="../images/crousel/edited/Untitled-6.jpg" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -270,8 +267,8 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='images/crousel/edited/Untitled-5.jpg'>">
-                <img class="img-fluid" src="images/crousel/edited/Untitled-5.jpg" alt="">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='../images/crousel/edited/Untitled-5.jpg'>">
+                <img class="img-fluid" src="../images/crousel/edited/Untitled-5.jpg" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -284,8 +281,8 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='images/crousel/edited/Untitled-7.jpg'>">
-                <img class="img-fluid" src="images/crousel/edited/Untitled-7.jpg" alt="">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='../images/crousel/edited/Untitled-7.jpg'>">
+                <img class="img-fluid" src="../images/crousel/edited/Untitled-7.jpg" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -298,8 +295,8 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='images/crousel/edited/Untitled-8.jpg'>">
-                <img class="img-fluid" src="images/crousel/edited/Untitled-8.jpg" alt="">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='../images/crousel/edited/Untitled-8.jpg'>">
+                <img class="img-fluid" src="../images/crousel/edited/Untitled-8.jpg" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -312,8 +309,8 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
                     </div>
                 </div>
             </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='images/crousel/edited/Untitled-9.jpg'>">
-                <img class="img-fluid" src="images/crousel/edited/Untitled-9.jpg" alt="">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='../images/crousel/edited/Untitled-9.jpg'>">
+                <img class="img-fluid" src="../images/crousel/edited/Untitled-9.jpg" alt="">
                 <div class="owl-carousel-inner">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -331,36 +328,25 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
     <!-- Carousel End -->
 
     <!-- Marquee Start -->
-    <marquee class="blink" scrollamount="10;">Welcome to the “Kalutara – the Pride of Kalugamthota”, Online Service of Kalutara Municipal Council!</marquee>
+    <marquee class="blink" scrollamount="10;">வணக்கம், களுகம்தோடையின் பெருமை - களுத்துறை - வலை களுத்துறை பெருநகர சபை சேவைக்கு வரவேற்கிறோம்!</marquee>
     <!-- <marquee style="width: 97%; margin-left: 20px; margin-right: 20px;" scrollamount="10;";>
-        <h3>ආයුබෝවන්, අන්තර්ජාලිය කළුතර මහා නගර සභා සේවාවට ඔබව සාදරයෙන් පිළිගනිමු!</h3>
+        <h3>ආයුබෝවන්, කළුගම්තොට අභිමානය - කළුතර - අන්තර්ජාලිය කළුතර මහා නගර සභා සේවාවට ඔබව සාදරයෙන් පිළිගනිමු!</h3>
     </marquee> -->
     <!-- Marquee End -->
 
     <!-- Vision-Mission Start -->
     <section class="rabuda">
         <div class="grid-container">
-            <div class="grid-item">
-            <!-- <div class="circle-icon vision">
-                <img src="https://tuning-mania.com/pub/media/wysiwyg/mission-icon.png" alt="Vision Icon">
-            </div> -->
-            <h3 class="pop-heading">Our Vision</h3>
-            <p class="paragraph">"Uplifting Kalutara, the capital city of the District towards a pleasant town with good governance 
-                and sustainable development."</p>
-            </div>
-            <div class="grid-item">
-            <!-- <div class="circle-icon mission">
-                <img src="https://tuning-mania.com/pub/media/wysiwyg/vision-icon.png" alt="Mission Icon">
-            </div> -->
-            <h3 class="pop-heading">Our Mission</h3>
-            <p class="paragraph">"Uplifting the life of the citizens of Kalutara City by providing municipal services that ensure safe 
-                reliable public welfare oriented and good health friendly environment for all the people living in 
-                Kalutara through upgrading the Municipal Council to the optimum place of the municipal
-                administration by improving the performance of the institutional management and managing 
-                limited resources efficiently and effectively."</p>
-            </div>
-      </div>
-    </section>
+          <div class="grid-item">
+            <h3 class="pop-heading"><i class="fa fa-eye" aria-hidden="true"></i> <!-- Vision Icon --> பார்வை</h3>
+            <p class="paragraph">"மாவட்டத்தின் தலைநகரான களுத்துறை நகரை நிலையான அபிவிருத்தி மற்றும் நல்லாட்சியை உருவாக்கி அனைவரும் விரும்பதக்க நகரமாக உயர்த்துவது."</p>
+          </div>
+          <div class="grid-item">
+            <h3 class="pop-heading"><i class="fa fa-bullseye" aria-hidden="true"></i> <!-- Mission Icon --> நோக்கம்</h3>
+            <p class="paragraph">"காரியால முகாமைமைத்துவத்தை நிர்வாக செயல்திறன் மூலம் மேம்படுத்திமாநகர சபையின் அலுவலகத்தை மாநகர நிர்வாகத்தில் மிக முக்கியமான இடமாக மாற்றுவதன் மூலம் களுத்துறை நகரில் வாழும் அனைத்து மக்களுக்கும் பாதுகாப்பான மற்றும் நம்பகமான பொது நலன்களை ஏற்படுத்தி ஆரோக்கியமான சுகாதார நட்புறவை உறுதி செய்யும் சேவைகள் கொண்ட களுத்துறை நகரத்தில் மட்டுப்படுத்தப்பட்ட வளங்களையும் கொண்டு மக்களின் வாழ்கையையும் திறமையாக நிர்வகித்தல்."</p>
+          </div>
+        </div>
+      </section>      
     <!-- Vision-Mission End -->
 
 <!-- Button for phone mode -->
@@ -370,27 +356,27 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
 <div class="row">
     <div class="column">
       <a href="#">
-        <img src="images/bar/ads.jpg" alt="Services Internet" class="imhs">
+        <img src="../images/bar/ads.jpg" alt="Services Internet" class="imhs">
       </a>
     </div>
     <div class="column">
-      <a href="downloadseng.html">
-        <img src="images/bar/citizenship.jpg" alt="RTI" class="imhs">
+      <a href="../tamil/ta-downloads.html">
+        <img src="../images/bar/citizenship.jpg" alt="RTI" class="imhs">
       </a>
     </div>
     <div class="column">
-        <a href="serviceseng.html">
-          <img src="images/bar/services.jpg" alt="Another Photo" class="imhs">
+        <a href="../tamil/ta-services.html">
+          <img src="../images/bar/services.jpg" alt="Another Photo" class="imhs">
         </a>
     </div>
     <div class="column">
       <a href="https://kalutara.mc.gov.lk/services/index.html">
-        <img src="images/bar/services-interenet.jpg" alt="Another Photo" class="imhs">
+        <img src="../images/bar/services-interenet.jpg" alt="Another Photo" class="imhs">
       </a>
     </div>
     <div class="column">
-      <a href="rti-pageeng.html">
-        <img src="images/bar/rti.jpg" alt="Yet Another Photo" class="imhs">
+      <a href="../tamil/ta-rti-page.html">
+        <img src="../images/bar/rti.jpg" alt="Yet Another Photo" class="imhs">
       </a>
     </div>
 </div>
@@ -441,40 +427,40 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: auto; background-color: #ad5610; padding: 20px; border-radius: 10px;">
-                <h4 class="section-title">Our Services</h4>
-                <h1 style="font-size: 20px;">Below are some of the services provided by the Kalutara Municipal Council.</h1>
+                <h4 class="section-title">எங்கள் சேவைகள்</h4>
+                <h1 style="font-size: 20px;">களுத்துறை மாநகர சபையினால் வழங்கப்படும் சில சேவைகள் கீழே கொடுக்கப்பட்டுள்ளன.</h1>
             </div>            
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-imgs" src="images/services-photos/Untitled-2.jpg" alt="">
+                        <img class="bg-imgs" src="../images/services-photos/Untitled-2.jpg" alt="">
                         <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-11.png" alt="Icon">
-                            <h3 class="mb-3">Public Library</h3>
-                            <p class="mb-4">Library Service is Provided for you by Kalutara Municipal Council.</p>
-                            <a class="btn" href="library.html"><i class="fa fa-plus text-primary me-3"></i><strong>Visit</strong></a>
+                            <img class="mb-4" src="../img/icons/icon-11.png" alt="Icon">
+                            <h3 class="mb-3">பொது நூலகம்</h3>
+                            <p class="mb-4">කළුතර මහා නගර සභාවෙන් ඔබ වෙනුවෙන් සපයන පුස්තකාල සේවාව.</p>
+                            <a class="btn" href="../tamil/ta-library.html"><i class="fa fa-plus text-primary me-3"></i><strong>உள்நுழைக</strong></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-imgs" src="images/services-photos/Untitled-3.jpg" alt="">
+                        <img class="bg-imgs" src="../images/services-photos/Untitled-3.jpg" alt="">
                         <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-12.png" alt="Icon">
-                            <h3 class="mb-3">Fire Services</h3>
-                            <p class="mb-4">Fire Service is Provided for you by Kalutara Municipal Council.</p>
-                            <a class="btn" href="fire.html"><i class="fa fa-plus text-primary me-3"></i><strong>Visit</strong></a>
+                            <img class="mb-4" src="../img/icons/icon-12.png" alt="Icon">
+                            <h3 class="mb-3">தீயணைப்பு சேவை</h3>
+                            <p class="mb-4">කළුතර මහා නගර සභාවෙන් ඔබ වෙනුවෙන් සපයන ගිනි නිවීමේ සේවාව.</p>
+                            <a class="btn" href="../tamil/ta-fire.html"><i class="fa fa-plus text-primary me-3"></i><strong>உள்நுழைக</strong></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-imgs" src="images/services-photos/Untitled-1.jpg" alt="">
+                        <img class="bg-imgs" src="../images/services-photos/Untitled-1.jpg" alt="">
                         <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-13.png" alt="Icon">
-                            <h3 class="mb-3">Children Playgrounds</h3>
-                            <p class="mb-4">Children Playgrounds are Provided for you by Kalutara Municipal Council.</p>
-                            <a class="btn" href="playground.html"><i class="fa fa-plus text-primary me-3"></i><strong>Visit</strong></a>
+                            <img class="mb-4" src="../img/icons/icon-13.png" alt="Icon">
+                            <h3 class="mb-3">குழந்தைகள் தோட்டங்கள்</h3>
+                            <p class="mb-4">කළුතර මහා නගර සභාවෙන් දරුවන් වෙනුවෙන් සපයන ළමා උද්‍යාන සේවාව.</p>
+                            <a class="btn" href="../tamil/ta-playground.html"><i class="fa fa-plus text-primary me-3"></i><strong>உள்நுழைக</strong></a>
                         </div>
                     </div>
                 </div>
@@ -487,14 +473,14 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h4 class="section-title">Kalutara Municipal Council</h4>
-                <h1 class="display-5 mb-4">Announcements</h1>
+                <h4 class="section-title">களுத்துறை மகா மாநகர சபை</h4>
+                <h1 class="display-5 mb-4">அறிவிப்புகள்</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-1.jpg' alt=''>">
-                    <p class="fs-5">අය – වැය ලේඛන සහ අවසාන ගිණුම් කළුතර මහා නගර සභා පරීශ්‍රයට පැමිණ පරිශීලනය කිරීමට හෝ ඒවායේ දෘඪ පිටපත් ලබා ගැනීමට හැකි බව කාරුණිකව දන්වා සිටිමි.</p>
-                    <h3>L. P. Manoja S. Pathirana</h3>
-                    <span class="text-primary">Commissioner – Kalutara Municipal Council</span>
+                    <p class="fs-5">வரவுசெலவுத் திட்ட ஆவணங்கள் மற்றும் இறுதிக் கணக்குகளை களுத்துறை மகாநகர சபையில் பார்வையிடலாம் அல்லது ஆலோசனை பெறலாம் அல்லது அவற்றின் பிரதிகளை பெற்றுக்கொள்ளலாம் என்பதை அன்புடன் தெரிவித்துக்கொள்கிறேன்.</p>
+                    <h3>எல். பி. மனோஜா எஸ். பத்திரனா</h3>
+                    <span class="text-primary">மாநகர ஆணையாளர் - களுத்துறை மாநகரசபை</span>
                 </div>
                 <!-- <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-2.jpg' alt=''>">
                     <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
@@ -513,7 +499,7 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
 
     <!-- Emergency Numbers Marquee - Start -->
     <marquee behavior="alternate" direction="left">
-        <img src="images/marquee/Untitled-1.jpg" width="auto" height="80" margin="80%" alt="Natural" />
+        <img src="../images/marquee/Untitled-1.jpg" width="auto" height="80" margin="80%" alt="Natural" />
     </marquee>
     <!-- Emergency Numbers Marquee - End -->
 
@@ -521,37 +507,37 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
     <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6" style="font-family: mySecondFont;">
-                    <h3 class="text-light mb-4">Connect with us</h3>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>No: 2, Riverside Rd, Kalutara</p>
+                <div class="col-lg-3 col-md-6" style="font-family: myFirstFont;">
+                    <h3 class="text-light mb-4">தொடர்பில் இருங்கள்</h3><hr>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>இலக்கம் 2, ஆற்றங்கரை வீதி, களுத்துறை</p>
                     <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+0342 222 275</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>uckalutara22@gmail.com</p>
                     <div class="d-flex pt-2 align-items-center">
                         <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
                         <div style="color: #007bff; font-size: 14px; margin-right: 10px;"></div>
-                        <a href='http://www.freevisitorcounters.com'>Free Visitor Counters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=8342d6dac2e0315c295530ed2bd26996f0720a19'></script>
+                        <a href='http://www.freevisitorcounters.com'>Visitors</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=8342d6dac2e0315c295530ed2bd26996f0720a19'></script>
                         <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1166215/t/9"></script>
                     </div>
                 </div>                
-                <div class="col-lg-3 col-md-6" style="font-family: mySecondFont;">
-                    <h3 class="text-light mb-4">Quick Links</h3>
-                    <a class="btn btn-link" href="sectors.html">Functional Divisions of the Municipal Council</a>
-                    <a class="btn btn-link" href="fire.html">Fire services</a>
-                    <a class="btn btn-link" href="downloads.html">Downloads</a>
-                    <a class="btn btn-link" href="https://kalutara.mc.gov.lk/services/index.html">Internet Services</a>
-                    <a class="btn btn-link" href="inquiry.html">Your Inquiries, Thoughts</a>
+                <div class="col-lg-3 col-md-6" style="font-family: myFirstFont;">
+                    <h3 class="text-light mb-4">விரைவு இணைப்புகள்</h3><hr>
+                    <a class="btn btn-link" href="sectors.html">நகராட்சி மன்றத்தின் செயல்பாட்டு பிரிவுகள்</a>
+                    <a class="btn btn-link" href="fire.html">தீயணைப்பு சேவை</a>
+                    <a class="btn btn-link" href="downloads.html">பதிவிறக்கங்கள்</a>
+                    <a class="btn btn-link" href="https://kalutara.mc.gov.lk/services/index.html">இணைய சேவை</a>
+                    <a class="btn btn-link" href="inquiry.html">உங்கள் புகார்கள், கருத்துகள்</a>
                 </div>
-                <div class="col-lg-3 col-md-6" style="font-family: mySecondFont;">
-                    <h3 class="text-light mb-4">Other Links</h3>
-                    <a class="btn btn-link" href="">Link 1</a>
-                    <a class="btn btn-link" href="">Link 2</a>
-                    <a class="btn btn-link" href="">Link 3</a>
-                    <a class="btn btn-link" href="">Link 4</a>
+                <div class="col-lg-3 col-md-6" style="font-family: myFirstFont;">
+                    <h3 class="text-light mb-4">பிற இணைப்புகள்</h3><hr>
+                    <a class="btn btn-link" href="">இணைப்புகள் 1</a>
+                    <a class="btn btn-link" href="">இணைப்புகள் 2</a>
+                    <a class="btn btn-link" href="">இணைப்புகள் 3</a>
+                    <a class="btn btn-link" href="">இணைப்புகள் 4</a>
                     <!-- <a class="btn btn-link" href="">Construction</a> -->
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Road Map</h3>
+                    <h3 class="text-light mb-4">வரைபடம்s</h3><hr>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d700.6532394794938!2d79.96064668279506!3d6.585441237349438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2371f091a9703%3A0xa19f6e4a9b107c18!2sKalutara%20Urban%20Council!5e0!3m2!1sen!2slk!4v1711437635380!5m2!1sen!2slk" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
@@ -560,11 +546,11 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="https://www.kalutara.mc.gov.lk">2024 Kalutara Municipal Council</a>, All Rights Reserved.
+                        &copy; <a href="kalutara.mc.gov.lk">2024 களுத்துறை மாநகரசபை</a>, கடைசியாகப் புதுப்பிக்கப்பட்டது: ஜூன் 02, 2024 @ 8:18 am அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Project By: <img src="images/Nekfa.png" height="30px"><a href="https://nekfa.com" target="_blank">Nekfa Australia (Pvt) Ltd.</a>
+                        Project By: <img src="../images/Nekfa.png" height="30px"><a href="https://nekfa.com" target="_blank">Nekfa Australia (Pvt) Ltd.</a>
                         <!-- <br> Developed By: <a class="border-bottom" href="https://linkedin.com/in/nimnaka-kumaradasa-07283923a" target="_blank">H. K. Nimnaka Kumaradasa</a> -->
                     </div>                    
                 </div>
@@ -580,20 +566,23 @@ Find me on LinkedIn:  https://lk.linkedin.com/in/nimnaka-kumaradasa-07283923a --
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
     <!-- This is clock JavaScript which is represent in top bar -->
-    <script src="js/clock.js"></script>    
-    <script src="js/pops.js"></script>
+    <script src="../js/clock.js"></script>    
+    <script src="../js/pops.js"></script>
+
+    <!-- Countdown Timer Script -->
+    <!-- <script src="js/countdown.js"></script> -->
 
 </body>
 
