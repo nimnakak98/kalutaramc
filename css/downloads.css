@@ -1,68 +1,62 @@
-.container-loop {
-    max-width: 900px;
-    margin: 80px auto;
+/* CSS */
+.downloads-section {
+    margin: 20px auto;
+    max-width: 1200px;
     padding: 20px;
-    background-color: #fffaf6;
+    background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.dull {
+
+.title {
+    font-size: 24px;
+    color: #333;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.document-name {
-    font-weight: bold;
-}
-.downloads-button {
-    display: inline-block;
-    padding: 8px 20px;
-    background-color: #e4490c;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 3px;
-    transition: background-color 0.3s;
-}
-.downloads-button:hover {
-    color: #eeff03;
-    background: rgb(214,104,67);
-    background: linear-gradient(90deg, rgba(214,104,67,1) 0%, rgba(163,82,10,0.8547794117647058) 35%, rgba(208,20,11,1) 100%);
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-.container-loops {
-    max-width: 100%;
-    margin: 80px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    overflow-x: auto;
-}
-table {
+.downloads-table {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
 }
-th, td {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
+
+.downloads-table th, .downloads-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
 }
-th {
+
+.downloads-table th {
+    background-color: #821a07;
+    color: white;
+    font-weight: bold;
+}
+
+.downloads-table td {
+    background-color: #fff;
+}
+
+.downloads-table tr:nth-child(even) {
     background-color: #f2f2f2;
-    font-weight: bold;
 }
-.documents-name {
-    font-weight: bold;
-    font-size: 14px;
+
+.downloads-table tr:hover {
+    background-color: #ddd;
 }
+
 .downloads-button {
-    padding: 6px 12px;
-    background-color: #b43c05;
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #4CAF50;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.downloads-button:hover {
+    background-color: #e16a20;
+    color: #f9f9f9;
 }

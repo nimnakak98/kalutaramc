@@ -51,31 +51,6 @@
     transform: rotateY(0deg);
 }
 
-/* New card styling */
-.new-card .front {
-    background-color: #2a3894;
-    color: #050000;
-    transform: rotateX(0deg);
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.new-card .back {
-    background-color: #8cc283;
-    color: #fff;
-    transform: rotateX(180deg);
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.new-card:hover .front {
-    transform: rotateX(-180deg);
-}
-
-.new-card:hover .back {
-    transform: rotateX(0deg);
-}
-
 /* Text styling */
 h1 {
     margin: 0;
@@ -87,12 +62,4 @@ h1 {
     margin: 0;
     color: #050000;
     font-weight: bold;
-}
-
-.demons {
-    margin: 0;
-    color: #050000;
-    font-weight: bold;
-    font-size: 25px;
-    color: #021d38;
 }

@@ -1,0 +1,19 @@
+
+/* Progress bar */
+
+.progress-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #f0f0f0;
+  z-index: 9999;
+}
+
+.progress-bar {
+  height: 100%;
+  background: rgb(151,214,67);
+  background: linear-gradient(90deg, rgba(151,214,67,1) 0%, rgba(105,153,254,1) 100%, rgba(10,138,255,0.85) 716%);
+  transition: all 0.3s ease;
+}
